@@ -1,4 +1,20 @@
 Planner::Application.routes.draw do
+  resources :providers
+
+  resources :activities
+
+  resources :days
+
+  resources :segments
+
+  resources :plans
+
+  resources :preferences
+
+  resources :profiles
+
+  resources :users
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

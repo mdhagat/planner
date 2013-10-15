@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Day:</strong>
+  <%= @day.day %>
+</p>
+
+<p>
+  <strong>Segment:</strong>
+  <%= @day.segment_id %>
+</p>
+
+<%= link_to 'Edit', edit_day_path(@day) %> |
+<%= link_to 'Back', days_path %>

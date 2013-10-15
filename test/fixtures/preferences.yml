@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  type_of_travelers: 1
+  how_you_travel: 1
+  what_to_see: 1
+  how_long: 1
+  which_region: 1
+  what_season: 1
+  user_id: 1
+
+two:
+  type_of_travelers: 1
+  how_you_travel: 1
+  what_to_see: 1
+  how_long: 1
+  which_region: 1
+  what_season: 1
+  user_id: 1

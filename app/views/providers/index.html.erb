@@ -1,0 +1,49 @@
+<h1>Listing providers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Thumbnail</th>
+      <th>Provider type</th>
+      <th>Street address1</th>
+      <th>Street address2</th>
+      <th>City</th>
+      <th>State provice</th>
+      <th>Country region</th>
+      <th>Pin zip</th>
+      <th>Phone</th>
+      <th>Url</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @providers.each do |provider| %>
+      <tr>
+        <td><%= provider.name %></td>
+        <td><%= provider.description %></td>
+        <td><%= provider.thumbnail %></td>
+        <td><%= provider.provider_type %></td>
+        <td><%= provider.street_address1 %></td>
+        <td><%= provider.street_address2 %></td>
+        <td><%= provider.city %></td>
+        <td><%= provider.state_provice %></td>
+        <td><%= provider.country_region %></td>
+        <td><%= provider.pin_zip %></td>
+        <td><%= provider.phone %></td>
+        <td><%= provider.url %></td>
+        <td><%= link_to 'Show', provider %></td>
+        <td><%= link_to 'Edit', edit_provider_path(provider) %></td>
+        <td><%= link_to 'Destroy', provider, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Provider', new_provider_path %>

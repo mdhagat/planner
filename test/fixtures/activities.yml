@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  day: 2013-10-14
+  name: MyString
+  description: MyText
+  thumbnail: MyText
+  start_time: 2013-10-14 17:22:26
+  stop_time: 2013-10-14 17:22:26
+  day_id: 1
+
+two:
+  day: 2013-10-14
+  name: MyString
+  description: MyText
+  thumbnail: MyText
+  start_time: 2013-10-14 17:22:26
+  stop_time: 2013-10-14 17:22:26
+  day_id: 1

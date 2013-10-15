@@ -1,0 +1,74 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Role:</strong>
+  <%= @profile.role %>
+</p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @profile.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @profile.last_name %>
+</p>
+
+<p>
+  <strong>Street address1:</strong>
+  <%= @profile.street_address1 %>
+</p>
+
+<p>
+  <strong>Street address2:</strong>
+  <%= @profile.street_address2 %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @profile.city %>
+</p>
+
+<p>
+  <strong>State province:</strong>
+  <%= @profile.state_province %>
+</p>
+
+<p>
+  <strong>Country region:</strong>
+  <%= @profile.country_region %>
+</p>
+
+<p>
+  <strong>Pin zip:</strong>
+  <%= @profile.pin_zip %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @profile.phone %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @profile.email %>
+</p>
+
+<p>
+  <strong>Secret question:</strong>
+  <%= @profile.secret_question %>
+</p>
+
+<p>
+  <strong>Secret answer:</strong>
+  <%= @profile.secret_answer %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @profile.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_profile_path(@profile) %> |
+<%= link_to 'Back', profiles_path %>
