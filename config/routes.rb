@@ -16,6 +16,8 @@ Planner::Application.routes.draw do
   resources :users
   
   resource :session
+  
+  resource :wizard
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -71,4 +73,10 @@ Planner::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  
+  root 'wizards#index'
+  
+  get '/login' => "sessions#new", :as => "login"
+  get '/logout' => "sessions#destroy", :as => "logout"
+  
 end

@@ -8,7 +8,59 @@
 </head>
 <body>
 
-<%= yield %>
+<div class="bigbox">
+
+	<div class="logo"><img class="logo_img" src="images/planminetoo_logo.jpg"></img></div>
+	
+	<div class="access">
+		<ul id="access_menu">
+			<% if session[:user_id] %>
+				<% if User.find(session[:user_id]).profile %>
+					<li>Welcome <%= User.find(session[:user_id]).profile.first_name %>! </li>
+				<% else %>
+					<li>Welcome <%= User.find(session[:user_id]).name %>!</li>
+				<% end %>
+				<li> <%= link_to 'Sign Out', logout_path %></li>
+			<% else %>
+				<% if (controller != 'sessions') && (request.path != login_path) %>
+					<li><%= link_to 'Login', login_path %></li> 
+					<li><%= link_to 'Register', new_user_path %> </li>
+				<% end %>
+			<% end %>
+			<li><a href="#">How it Works</a></li>
+			<li><a id="access_button" href="#">Share your Trip!</a></li>
+		</ul>
+	</div>
+	
+	<div class="navigation">
+		<ul id="navigation_menu">
+			<li><a class="navigation_item" href="#">Home</a></li>
+			<li><a class="navigation_item" href="#">Plans</a></li>
+			<li><a class="navigation_item" href="#">Network</a></li>
+			<li><a class="navigation_item" href="#">Ideas</a></li>
+			<li><a class="navigation_item" href="#">Account</a></li>
+		</ul>	
+	</div>
+
+	<div class="body">
+	
+		<%= yield %>
+	
+	</div>
+
+	<div class="footer">
+		<ul id="footer_menu">
+			<li><a href="#">Collections</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Jobs</a></li>
+			<li><a href="#">Help</a></li>
+			<li><a href="#">Contact</a></li>
+			<li><a href="#">Terms & Privacy</a></li>
+		</ul>
+		(c) Plan Mine Too Inc.
+	</div>
+
+</div>
 
 </body>
 </html>

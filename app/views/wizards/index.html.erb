@@ -1,0 +1,35 @@
+	
+		<div class="wizard">
+			<p class="wizard_title">Plan a Vacation.</p>
+			<p class="wizard_body">Get going in 3 clicks.</p>
+			<img class="wizard_steps" src="images/step_one.jpg"></img>
+			<p class="wizard_title">Where do you want to?</p>
+			
+			<%= form_tag("/wizard/next", :method => "get", :class => "wizard_body", :remote => true) do %>
+				<%= radio_button_tag "where", "europe_countries", true %> 2 or 3 countries in Europe<br />
+				<%= radio_button_tag "where", "these_countries" %> These Countries: <%= text_field_tag "countries", "Italy, France, Germany" %><br />
+				<%= radio_button_tag "where", "surprise_me" %> Surprise Me!<br /><br />
+				<%= submit_tag "Go", :class => "wizard_button" %>
+			<% end %>
+
+		</div>
+		<div class="feature">
+			<img class="feature_img" src="images/riomaggiore.jpg"></img>
+			<div class="feature_desc"><b>2 weeks - London, Amsterdam and Lake Como</b> - Tower of London, Stonehenge, Anne Frank House, Bellagio</div>
+		</div>
+		<div id="promo_one" class="promo">
+			<img class="promo_img" src="images/italy.jpg"></img>
+			<div class="promo_desc">Basics of Trip Planning</div>
+		</div>
+		<div id="promo_two" class="promo">
+			<img class="promo_img" src="images/germany_castle.jpg"></img>
+			<div class="promo_desc">Why use VoloMoon</div>
+		</div>
+		<div id="promo_three" class="promo">
+			<img class="promo_img" src="images/france_tower.jpg"></img>
+			<div class="promo_desc">Top-Ten Trips to Take</div>
+		</div>
+		<div id="promo_four" class="promo">
+			<img class="promo_img" src="images/rail.jpg"></img>
+			<div class="promo_desc">Train Connections Tricks</div>
+		</div>

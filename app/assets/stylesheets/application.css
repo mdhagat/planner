@@ -11,3 +11,152 @@
  *= require_self
  *= require_tree .
  */
+
+body
+{
+	text-align:center;
+	font-family:Verdana,sans-serif;
+}
+
+a:link {
+	color: green;
+	text-decoration : none;
+}
+a:visited {
+	color: green;
+	text-decoration : none;
+}
+a:hover {
+	color: green;
+}
+a:active {
+	color: green;
+}
+
+div.bigbox
+{
+	position:relative;
+    margin-left: auto;
+    margin-right: auto;
+	height:900px;
+	width:1000px;
+	border-style:solid;
+	border-width:0px;
+}
+
+div.logo
+{
+	position:absolute;
+	top:10px;
+	left:10px;
+	height:80px;
+	width:440px;
+	display:block;
+	border-style:solid;
+	border-width:0px;
+}
+
+img.logo_img
+{
+	position:absolute;
+	top:10px;
+	left:10px;
+	/*
+	height:60px;
+	width:200px;
+	*/
+}
+
+div.access
+{
+	position:absolute;
+	top:10px;
+	right:10px;
+	height:80px;
+	width:510px;
+	border-style:solid;
+	border-width:0px;
+}
+
+#access_menu
+{
+	font-size:small;
+	text-align:right;
+	padding:0px;
+	margin:20px;
+	border-style:solid;
+	border-width:0px;
+}
+
+#access_menu li {
+	display:inline;
+	padding:0px;
+	margin:5px;
+	border-style:solid;
+	border-width:0px;
+}
+
+#access_button
+{
+	border-style: solid;
+	border-width : 1px;
+	text-decoration : none;
+	padding : 7px;
+	background-color:gold;
+	border-color:goldenrod;
+}
+
+div.navigation
+{
+	position:absolute;
+	top:100px;
+	left:10px;
+	height:50px;
+	width:980px;
+	border-style:solid;
+	border-width:0px;
+}
+
+#navigation_menu {
+	font-size:medium;
+	text-align:left;
+	padding:0px;
+	margin:10px;
+}
+
+#navigation_menu li {
+	display:inline;
+	padding:0px;
+	margin:10px;
+}
+
+div.body
+{
+	position:absolute;
+	top:160px;
+	left:10px;
+	height:650px;
+	width:980px;
+	border-style:solid;
+	border-width:0px;
+}
+
+div.footer
+{
+	position:absolute;
+	top:820px;
+	left:10px;
+	height:70px;
+	width:980px;
+	border-style:solid;
+	border-width:0px;
+	font-size:small;
+	border-style:solid;
+	border-width:0px;
+}
+
+#footer_menu li {
+	display:inline;
+	padding:0px;
+	margin:3px;
+}
