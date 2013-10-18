@@ -76,7 +76,10 @@ Planner::Application.routes.draw do
   
   root 'wizards#index'
   
-  get '/login' => "sessions#new", :as => "login"
+  get '/login' => "sessions#create", :as => "login"
   get '/logout' => "sessions#destroy", :as => "logout"
   
+  get '/step_two' => "wizards#step_two", :as => "step_two"
+  get '/step_three' => "wizards#step_three", :as => "step_three"
+
 end
