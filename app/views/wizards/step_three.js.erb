@@ -1,0 +1,12 @@
+$('.wizard_question').replaceWith('<p class="wizard_question">How long will the vacation be?</p>')
+$('.wizard_steps').replaceWith('<img class="wizard_steps" src="images/step_three.jpg"></img>')
+$('.wizard_form').replaceWith('\
+		<div class="wizard_form"> \
+			<%= form_tag("/show_result", :method => "get", :class => "wizard_body", :remote => :true) do %> \
+				<%= radio_button_tag "how_long", "2_weeks", true %> 2 weeks <br /> \
+				<%= radio_button_tag "how_long", "3_weeks", true %> 3 weeks <br /> \
+				<%= radio_button_tag "how_long", "this_many_days" %> This many days: <%= text_field_tag "9" %><br /> <br/> \
+				<%= submit_tag "Done", :class => "wizard_button" %> \
+			<% end %> \
+		</div> \
+')

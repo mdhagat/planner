@@ -1,0 +1,12 @@
+$('.wizard_question').replaceWith('<p class="wizard_question">What type traveller are you?</p>')
+$('.wizard_steps').replaceWith('<img class="wizard_steps" src="images/step_two.jpg"></img>')
+$('.wizard_form').replaceWith('\
+		<div class="wizard_form"> \
+			<%= form_tag("/step_three", :method => "get", :class => "wizard_body", :remote => :true) do %> \
+				<%= radio_button_tag "who", "family_kids", true %> Family with Kids <br /> \
+				<%= radio_button_tag "who", "history_museum" %> History and Museum Buffs <br /> \
+				<%= radio_button_tag "who", "backpacker" %> Adventure Backpackers <br /><br /> \
+				<%= submit_tag "Next", :class => "wizard_button" %> \
+			<% end %> \
+		</div> \
+')
