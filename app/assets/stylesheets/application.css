@@ -98,12 +98,13 @@ div.access
 
 #access_button
 {
+	color: black;
 	border-style: solid;
 	border-width : 1px;
 	text-decoration : none;
 	padding : 7px;
-	background-color:gold;
-	border-color:goldenrod;
+	background-color:#CDC9A5;
+	border-color:#CDC9A5;
 }
 
 div.navigation

@@ -3,6 +3,8 @@ $('.wizard_steps').replaceWith('<img class="wizard_steps" src="images/step_two.j
 $('.wizard_form').replaceWith('\
 		<div class="wizard_form"> \
 			<%= form_tag("/step_three", :method => "get", :class => "wizard_body", :remote => :true) do %> \
+				<%= hidden_field_tag "where", params[:where] %> \
+				<%= hidden_field_tag "countries", params[:countries] %> \
 				<%= radio_button_tag "who", "family_kids", true %> Family with Kids <br /> \
 				<%= radio_button_tag "who", "history_museum" %> History and Museum Buffs <br /> \
 				<%= radio_button_tag "who", "backpacker" %> Adventure Backpackers <br /><br /> \
