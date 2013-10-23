@@ -1,11 +1,14 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  name: MyString
-  hashed_password: MyString
-  salt: MyString
-
-two:
-  name: MyString
-  hashed_password: MyString
-  salt: MyString
+# admin/admin123
+admin:
+  id: 1
+  name: admin
+  hashed_password: cc50f7bc3a222c330a3d244bcba1ff0253bc17dc
+  salt: 387094600.647827580368466
+# cust/cust123
+customer:
+  id: 2
+  name: customer
+  hashed_password: d4cd917275cb0bb1e454e1aee6753826f96493fe
+  salt: 389924800.157265888219656

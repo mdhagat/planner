@@ -1,9 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  day: 2013-10-14
-  segment_id: 1
+<% 1.upto(9) do |i| %>
+day0<%= i %>:
+  id: <%= i %>
+  day: 2011-4-<%= i %>
+  segment_id: <%= (i/5).floor+1 %> 
+<% end %>
 
-two:
-  day: 2013-10-14
-  segment_id: 1
+<% 1.upto(14) do |i| %>
+day0<%= i+9 %>:
+  id: <%= i+9 %>
+  day: 2011-6-<%= i %>
+  segment_id: <%= (i/5).floor+3 %>
+<% end %>

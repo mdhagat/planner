@@ -8,7 +8,7 @@ class CreateProviders < ActiveRecord::Migration
       t.string :street_address1
       t.string :street_address2
       t.string :city
-      t.string :state_provice
+      t.string :state_province
       t.string :country_region
       t.string :pin_zip
       t.string :phone

@@ -1,13 +1,36 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  name: MyString
-  description: MyText
-  thumbnail: MyText
+plan01segment01:
+  id: 1
+  name: Italy
+  description: Italian Alps
+  thumbnail: italy.jpg
   plan_id: 1
 
-two:
-  name: MyString
-  description: MyText
-  thumbnail: MyText
+plan01segment02:
+  id: 2
+  name: Switzerland
+  description: Swiss Alps
+  thumbnail: switzerland.jpg
   plan_id: 1
+
+plan02segment01:
+  id: 3
+  name: Spain
+  description: Spain
+  thumbnail: spain.jpg
+  plan_id: 2
+
+plan02segment02:
+  id: 4
+  name: Germany
+  description: Germany
+  thumbnail: germany.jpg
+  plan_id: 2
+
+plan02segment03:
+  id: 5
+  name: England
+  description: England
+  thumbnail: england.jpg
+  plan_id: 2

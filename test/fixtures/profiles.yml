@@ -1,33 +1,35 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  role: MyString
-  first_name: MyString
-  last_name: MyString
-  street_address1: MyString
-  street_address2: MyString
-  city: MyString
-  state_province: MyString
-  country_region: MyString
-  pin_zip: MyString
-  phone: MyString
-  email: MyString
-  secret_question: MyString
-  secret_answer: MyString
+admin:
+  id: 1
+  role: administrator
+  first_name: Joe
+  last_name: Admin
+  street_address1: 123 Some Street
+  street_address2: Apt. A
+  city: Santa Monica
+  state_province: CA
+  country_region: USA
+  pin_zip: 90054
+  phone: 310-555-1212
+  email: admin@email.com
+  secret_question: What is your pet's name?
+  secret_answer: dog
   user_id: 1
 
-two:
-  role: MyString
-  first_name: MyString
-  last_name: MyString
-  street_address1: MyString
-  street_address2: MyString
-  city: MyString
-  state_province: MyString
-  country_region: MyString
-  pin_zip: MyString
-  phone: MyString
-  email: MyString
-  secret_question: MyString
-  secret_answer: MyString
-  user_id: 1
+customer:
+  id: 2
+  role: customer
+  first_name: Jane
+  last_name: Customer
+  street_address1: 123 Some Street
+  street_address2: Apt. A
+  city: San Jose
+  state_province: CA
+  country_region: USA
+  pin_zip: 95148
+  phone: 4028-555-1212
+  email: jane@email.com
+  secret_question: What is your pet's name?
+  secret_answer: fish
+  user_id: 2

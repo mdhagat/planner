@@ -1,6 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
+hotel:
+  id: 1
   name: MyString
   description: MyText
   thumbnail: MyText
@@ -8,13 +9,14 @@ one:
   street_address1: MyString
   street_address2: MyString
   city: MyString
-  state_provice: MyString
+  state_province: MyString
   country_region: MyString
   pin_zip: MyString
   phone: MyString
   url: MyString
 
-two:
+transport:
+  id: 2
   name: MyString
   description: MyText
   thumbnail: MyText
@@ -22,7 +24,22 @@ two:
   street_address1: MyString
   street_address2: MyString
   city: MyString
-  state_provice: MyString
+  state_province: MyString
+  country_region: MyString
+  pin_zip: MyString
+  phone: MyString
+  url: MyString
+
+other:
+  id: 3
+  name: MyString
+  description: MyText
+  thumbnail: MyText
+  provider_type: MyString
+  street_address1: MyString
+  street_address2: MyString
+  city: MyString
+  state_province: MyString
   country_region: MyString
   pin_zip: MyString
   phone: MyString

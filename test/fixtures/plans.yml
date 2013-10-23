@@ -1,15 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  name: MyString
-  description: MyText
-  thumbnail: MyText
+  id: 1
+  name: Europe March 2011
+  description: Backpacking trip through the Italian and Swiss Alps.
+  thumbnail: italy.jpg
   orig_plan_id: 1
   user_id: 1
 
 two:
-  name: MyString
-  description: MyText
-  thumbnail: MyText
-  orig_plan_id: 1
-  user_id: 1
+  id: 2
+  name: Spain Germany and England
+  description: Family trip across Europe
+  thumbnail: spain.jpg
+  orig_plan_id: 2
+  user_id: 2
