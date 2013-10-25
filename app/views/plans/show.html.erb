@@ -25,5 +25,20 @@
   <%= @plan.user_id %>
 </p>
 
+<table>
+  <tbody>
+    <% @plan.segments.each do |segment| %>
+    
+		<div class="segment">
+			<img class="segment_img" src="/images/italy.jpg"> </img> 
+			<div class="segment_desc"> <%= segment.description %></div> 
+			<div class="segment_show"> <%= link_to 'Show', segment %></div>
+		</div>    
+        <br/>
+    
+    <% end %>
+  </tbody> 
+</table>
+
 <%= link_to 'Edit', edit_plan_path(@plan) %> |
 <%= link_to 'Back', plans_path %>

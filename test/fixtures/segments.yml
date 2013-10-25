@@ -2,34 +2,41 @@
 
 plan01segment01:
   id: 1
-  name: Italy
-  description: Italian Alps
-  thumbnail: italy.jpg
+  name: Five days in London and Bath 
+  description: Best of London and Bath. In London, Tower of London, the new London Eye, and War Museum. In Bath, Stonehenge, quaint villages and the Roman Baths.
+  thumbnail: bath.jpg
   plan_id: 1
 
 plan01segment02:
   id: 2
-  name: Switzerland
-  description: Swiss Alps
-  thumbnail: switzerland.jpg
+  name: Three days in Amsterdam
+  description: Experience the Amsterdam Canals and the Tulip Market. Visit the Anne Frank House. Take a day to the typical Dutch villages of Volendam and Marken.
+  thumbnail: amsterdam.jpg
+  plan_id: 1
+  
+plan01segment03:
+  id: 3
+  name: Five days in Lake Como
+  description: Leisure in the Lakes Region north of Milan. Use Verrana as your base and explore lakeside towns of Bellagio and Como.
+  thumbnail: lakecomo.jpg
   plan_id: 1
 
 plan02segment01:
-  id: 3
+  id: 4
   name: Spain
   description: Spain
   thumbnail: spain.jpg
   plan_id: 2
 
 plan02segment02:
-  id: 4
+  id: 5
   name: Germany
   description: Germany
   thumbnail: germany.jpg
   plan_id: 2
 
 plan02segment03:
-  id: 5
+  id: 6
   name: England
   description: England
   thumbnail: england.jpg
