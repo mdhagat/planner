@@ -1,37 +1,19 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @plan.name %>
-</p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @plan.description %>
-</p>
-
-<p>
-  <strong>Thumbnail:</strong>
-  <%= @plan.thumbnail %>
-</p>
-
-<p>
-  <strong>Orig plan:</strong>
-  <%= @plan.orig_plan_id %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @plan.user_id %>
-</p>
-
+<div class="plan_heading"> Your Plan: <%= @plan.description %> </div>
+<br/>
 <table>
   <tbody>
     <% @plan.segments.each do |segment| %>
     
 		<div class="segment">
-			<img class="segment_img" src="/images/italy.jpg"> </img> 
-			<div class="segment_desc"> <%= segment.description %></div> 
+			<%= image_tag(segment.thumbnail, :class => "segment_img") %>	
+			<div class="segment_desc"> 
+				<div class="segment_title"> <%= segment.name %> </div> 
+				<br/> <br/>
+				<%= segment.description %>
+			</div> 
 			<div class="segment_show"> <%= link_to 'Show', segment %></div>
 		</div>    
         <br/>

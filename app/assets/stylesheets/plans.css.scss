@@ -2,48 +2,67 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+div.plan_heading
+{
+  background-color:white;
+  color: brown;
+  text-align:left;
+  font-size:large;
+  padding:5px;
+  margin:auto;
+//  border-style:solid;
+}
+
 div.segment
 {
   position:relative;
   height:130px;
-  width:850px;
+  width:950px;
   margin:auto;
-  background-color:#CDC9A5;
-  border-style:solid;
+  background-color:#E1DFC9;
+//  border-style:solid;
 }
 
 img.segment_img
 {
   position:absolute;
-  top:10px;
-  left:10px;
+  top:15px;
+  left:15px;
   height:100px;
   width:100px;
-  border-style:solid;
+//  border-style:solid;
 }
 
 div.segment_desc
 {
   position:absolute;
-  top:10px;
-  left:130px;
+  top:15px;
+  left:150px;
   height:90px;
   width:600px;
-  background-color:white;
+  //background-color:white;
   text-align:left;
   font-size:medium;
   padding:5px;
   margin:0px;
-  border-style:solid;
+//  border-style:solid;
+}
+
+div.segment_title
+{
+  position:absolute;
+  font-size:medium;
+  font-weight: bold;
+  color:#4C3380;
 }
 
 div.segment_show
 {
   position:absolute;
-  top:10px;
-  left:750px;
+  top:15px;
+  right:15px;
   text-align:left;
-  font-size:medium;
+  font-size:small;
   padding:5px;
 }
 
