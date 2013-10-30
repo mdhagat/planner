@@ -1,10 +1,9 @@
 <p id="notice"><%= notice %></p>
 
 
-<div class="plan_heading"> Your Plan: <%= @plan.description %> </div>
-<br/>
-<table>
-  <tbody>
+	<div class="plan_heading"> Your Plan: <%= @plan.description %> </div>
+	<br/>
+
     <% @plan.segments.each do |segment| %>
     
 		<div class="segment">
@@ -14,13 +13,10 @@
 				<br/> <br/>
 				<%= segment.description %>
 			</div> 
-			<div class="segment_show"> <%= link_to 'Show', segment %></div>
+			<%= link_to 'Day by Day', segment, :class => "segment_show" %>
 		</div>    
         <br/>
-    
-    <% end %>
-  </tbody> 
-</table>
 
-<%= link_to 'Edit', edit_plan_path(@plan) %> |
-<%= link_to 'Back', plans_path %>
+    <% end %>
+
+

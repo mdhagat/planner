@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Planner</title>
+  <title>Plan Mine Too</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+  <%= favicon_link_tag %>
 </head>
 <body>
 
 <div class="bigbox">
 
-	<div class="logo"><img class="logo_img" src="/images/planminetoo_logo.jpg"></img></div>
+	<div class="logo"><a href="/"><img class="logo_img" src="/images/planminetoo_logo.jpg"></img></a></div>
 	
 	<div class="access">
 		<ul id="access_menu">
@@ -43,9 +44,9 @@
 	</div>
 
 	<div class="body">
-	
+
 		<%= yield %>
-	
+
 	</div>
 
 	<div class="footer">
@@ -61,6 +62,7 @@
 	</div>
 
 </div>
+
 
 </body>
 </html>
