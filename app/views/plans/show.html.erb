@@ -20,3 +20,17 @@
     <% end %>
 
 
+    <% @plan.segments.each do |segment| %>
+    
+		<div class="segment">
+			<%= image_tag(segment.thumbnail, :class => "segment_img") %>	
+			<div class="segment_desc"> 
+				<div class="segment_title"> <%= segment.name %> </div> 
+				<br/> <br/>
+				<%= segment.description %>
+			</div> 
+			<%= link_to 'Day by Day', segment, :class => "segment_show" %>
+		</div>    
+        <br/>
+
+    <% end %>

@@ -2,11 +2,30 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+div.wizard_one
+{
+  position:relative;
+  height:420px;
+  width:1000px;
+  border-style:solid;
+  border-width:0px;
+}
+
+div.wizard_two
+{
+  position:relative;
+  height:220px;
+  width:1000px;
+  border-style:solid;
+  border-width:0px;
+}
+
 div.wizard
 {
   position:absolute;
   top:50px;
-  left:50px;
+  left:55px;
   height:300px;
   width:390px;
   text-align:left;
@@ -48,10 +67,12 @@ div.feature
 {
   position:absolute;
   top:10px;
-  right:45px;
+  right:55px;
   height:400px;
   width:455px;
   background-color:#CDC9A5;
+  border-style:solid;
+  border-width:0px;
 }
 
 img.feature_img
@@ -111,27 +132,27 @@ img.promo_img
 #promo_one
 {
   position:absolute;
-  top:420px;
-  left:35px;
+  top:10px;
+  left:40px;
 }
 
 #promo_two
 {
   position:absolute;
-  top:420px;
-  left:265px;
+  top:10px;
+  left:270px;
 }
 
 #promo_three
 {
   position:absolute;
-  top:420px;
-  left:495px;
+  top:10px;
+  left:500px;
 }
 
 #promo_four
 {
   position:absolute;
-  top:420px;
-  left:725px;
+  top:10px;
+  left:730px;
 }

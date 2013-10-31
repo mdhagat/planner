@@ -18,7 +18,7 @@ class ProvidersControllerTest < ActionController::TestCase
 
   test "should create provider" do
     assert_difference('Provider.count') do
-      post :create, provider: { city: @provider.city, country_region: @provider.country_region, description: @provider.description, name: @provider.name, phone: @provider.phone, pin_zip: @provider.pin_zip, provider_type: @provider.provider_type, state_provice: @provider.state_provice, street_address1: @provider.street_address1, street_address2: @provider.street_address2, thumbnail: @provider.thumbnail, url: @provider.url }
+      post :create, provider: { city: @provider.city, country_region: @provider.country_region, description: @provider.description, name: @provider.name, phone: @provider.phone, pin_zip: @provider.pin_zip, provider_type: @provider.provider_type, state_province: @provider.state_province, street_address1: @provider.street_address1, street_address2: @provider.street_address2, thumbnail: @provider.thumbnail, url: @provider.url }
     end
 
     assert_redirected_to provider_path(assigns(:provider))
@@ -35,7 +35,7 @@ class ProvidersControllerTest < ActionController::TestCase
   end
 
   test "should update provider" do
-    patch :update, id: @provider, provider: { city: @provider.city, country_region: @provider.country_region, description: @provider.description, name: @provider.name, phone: @provider.phone, pin_zip: @provider.pin_zip, provider_type: @provider.provider_type, state_provice: @provider.state_provice, street_address1: @provider.street_address1, street_address2: @provider.street_address2, thumbnail: @provider.thumbnail, url: @provider.url }
+    patch :update, id: @provider, provider: { city: @provider.city, country_region: @provider.country_region, description: @provider.description, name: @provider.name, phone: @provider.phone, pin_zip: @provider.pin_zip, provider_type: @provider.provider_type, state_province: @provider.state_province, street_address1: @provider.street_address1, street_address2: @provider.street_address2, thumbnail: @provider.thumbnail, url: @provider.url }
     assert_redirected_to provider_path(assigns(:provider))
   end
 
