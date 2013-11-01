@@ -4,12 +4,14 @@
 day0<%= i %>:
   id: <%= i %>
   day: 2011-4-<%= i %>
-  segment_id: <%= (i/5).floor+1 %> 
+  description: Activities on 2011-4-<%= i %>
+  segment_id: <%= (i/5).floor+1 %>
 <% end %>
 
 <% 1.upto(14) do |i| %>
 day0<%= i+9 %>:
   id: <%= i+9 %>
   day: 2011-6-<%= i %>
+  description: Activities on 2011-6-<%= i %>
   segment_id: <%= (i/5).floor+3 %>
 <% end %>

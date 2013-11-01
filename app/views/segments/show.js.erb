@@ -1,0 +1,6 @@
+
+$('.segment_text:eq(<%= (@segment.id - 1) %>)').replaceWith('<div class="segment_text">'    
+	<% @segment.days.each do |day| %>
+	+ '<%= day.description %> <br/>'	
+	<% end %> 
+	+ '</div>')
