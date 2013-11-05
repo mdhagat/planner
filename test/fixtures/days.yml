@@ -1,17 +1,93 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-<% 1.upto(9) do |i| %>
-day0<%= i %>:
-  id: <%= i %>
-  day: 2011-4-<%= i %>
-  description: Activities on 2011-4-<%= i %>
-  segment_id: <%= (i/5).floor+1 %>
-<% end %>
+day1:
+  id: 1
+  day: 2011-6-1
+  name: Arrive in London, Check-in at Hotel Hyde Park, Tower of London
+  description: Coming Soon
+  segment_id: 1
 
-<% 1.upto(14) do |i| %>
-day0<%= i+9 %>:
-  id: <%= i+9 %>
-  day: 2011-6-<%= i %>
-  description: Activities on 2011-6-<%= i %>
-  segment_id: <%= (i/5).floor+3 %>
-<% end %>
+day2:
+  id: 2
+  day: 2011-6-1
+  name: London Eye, Imperial War Museum
+  description: Coming Soon
+  segment_id: 1
+
+day3:
+  id: 3
+  day: 2011-6-1
+  name: Train to Bath (First Great Western), Check-in at Abbey Green Flat
+  description: Coming Soon
+  segment_id: 1
+
+day4:
+  id: 4
+  day: 2011-6-1
+  name: Stonehenge and Lacock Village Tour (Mad Max Tours)
+  description: Coming Soon
+  segment_id: 1
+
+day5:
+  id: 5
+  day: 2011-6-1
+  name: Roman Baths, Fashion Museum
+  description: Coming Soon
+  segment_id: 1
+
+day6:
+  id: 6
+  day: 2011-6-1
+  name: Bus to London (National Express),  Flight to Barcelona (British Airways), Check-in at Hotel Montblanc, Las Ramblas
+  description: Coming Soon
+  segment_id: 2
+
+day7:
+  id: 7
+  day: 2011-6-1
+  name: Sagrada Familia, Casa Batlo
+  description: Coming Soon
+  segment_id: 2
+
+day8:
+  id: 8
+  day: 2011-6-1
+  name: Walk to Beach, Olympic Harbor
+  description: Coming Soon
+  segment_id: 2
+
+day9:
+  id: 9
+  day: 2011-6-1
+  name: Flight to Milan (EasyJet), Bus to Varrena, Check-in at Hotel Villa Cipressi
+  description: Coming Soon
+  segment_id: 3
+
+day10:
+  id: 10
+  day: 2011-6-1
+  name: Around Varrena
+  description: Coming Soon
+  segment_id: 3
+
+day11:
+  id: 11
+  day: 2011-6-1
+  name: Day trip to Bellagio
+  description: Coming Soon
+  segment_id: 3
+
+day12:
+  id: 12
+  day: 2011-6-1
+  name: Day trip to Como
+  description: Coming Soon
+  segment_id: 3
+
+day13:
+  id: 13
+  day: 2011-6-1
+  name: Bus to Milan, Fight to London (EasyJet), Check-in at Springfield Hotel
+  description: Coming Soon
+  segment_id: 3
+  

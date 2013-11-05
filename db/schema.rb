@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 20131015003101) do
 
   create_table "days", force: true do |t|
     t.date     "day"
+    t.string   "name"
     t.text     "description"
     t.integer  "segment_id"
     t.datetime "created_at"

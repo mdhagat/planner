@@ -81,5 +81,8 @@ Planner::Application.routes.draw do
   
   get '/step_two' => "wizards#step_two", :as => "step_two"
   get '/step_three' => "wizards#step_three", :as => "step_three"
+  
+  get '/daybyday' => "segments#daybyday", :as => "daybyday"
+  get '/summary' => "segments#summary", :as => "summary"
 
 end

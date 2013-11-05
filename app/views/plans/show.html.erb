@@ -13,7 +13,7 @@
 				<br/> <br/>
 				<div class="segment_text"> <%= segment.description %> </div> 
 			</div> 
-			<%= link_to 'Day by Day', segment, :class => "segment_show", :segment_place => 2, :remote => :true %>
+			<%= link_to 'Day by Day', daybyday_url(:id => segment.id), :class => "segment_show", :remote => :true %>
 		</div>    
         <br/>
 

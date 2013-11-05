@@ -1,5 +1,5 @@
 class SegmentsController < ApplicationController
-  before_action :set_segment, only: [:show, :edit, :update, :destroy]
+  before_action :set_segment, only: [:show, :edit, :update, :destroy, :daybyday, :summary]
 
   # GET /segments
   # GET /segments.json
@@ -19,6 +19,26 @@ class SegmentsController < ApplicationController
 
   # GET /segments/1/edit
   def edit
+  end
+
+  # GET /daybyday
+  def daybyday
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.js {}
+      format.json { }
+    end
+  end
+
+  # GET /summary
+  def summary
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.js {}
+      format.json { }
+    end
   end
 
   # POST /segments
