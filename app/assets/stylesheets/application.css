@@ -38,7 +38,7 @@ div.bigbox_header
 	position:relative;
     margin-left: auto;
     margin-right: auto;
-    height:130px;
+    height:140px;
 	width:1000px;
 	border-style:solid;
 	border-width:0px;
@@ -67,9 +67,9 @@ div.bigbox_footer
 div.logo
 {
 	position:absolute;
-	top:20px;
+	top:10px;
 	left:20px;
-	height:70px;
+	height:60px;
 	width:440px;
 	display:block;
 	border-style:solid;
@@ -86,9 +86,9 @@ img.logo_img
 div.access
 {
 	position:absolute;
-	top:20px;
+	top:10px;
 	right:20px;
-	height:70px;
+	height:60px;
 	width:515px;
 	border-style:solid;
 	border-width:0px;
@@ -123,10 +123,28 @@ div.access
 	border-color:#FFB894;
 }
 
+div.notification
+{
+	position:absolute;
+	top:80px;
+	left:20px;
+	height:20px;
+	width:960px;
+	border-style:solid;
+	border-width:0px;
+}
+
+.flash_alert
+{
+	font-size:small;
+	font-weight:bold;
+	color:slateblue;  
+}
+
 div.navigation
 {
 	position:absolute;
-	top:90px;
+	top:100px;
 	left:20px;
 	height:30px;
 	width:960px;
@@ -145,17 +163,6 @@ div.navigation
 	display:inline;
 	padding:0px;
 	margin:10px;
-}
-
-div.body
-{
-	position:absolute;
-	top:160px;
-	left:10px;
-	height:650px;
-	width:980px;
-	border-style:solid;
-	border-width:0px;
 }
 
 div.footer

@@ -13,7 +13,7 @@
 				<li> <%= link_to 'Sign Out', logout_path %></li>
 			<% else %>
 				<% if (controller != 'sessions') && (request.path != login_path) %>
-					<li><%= link_to 'Login', login_path %></li> 
+					<li><%= link_to 'Login', new_session_path %></li> 
 					<li><%= link_to 'Register', new_user_path %> </li>
 				<% end %>
 			<% end %>
@@ -22,13 +22,21 @@
 		</ul>
 	</div>
 	
+	<div class="notification">				
+	    <% flash.each do |key, value| %>
+    	    <div class="flash_alert"><%= value %></div>
+	    <% end %>	
+	</div>
+	
 	<div class="navigation">
 		<ul id="navigation_menu">
+			<% if session[:user_id] %>
 			<li><a class="navigation_item" href="#">Home</a></li>
 			<li><a class="navigation_item" href="#">Plans</a></li>
 			<li><a class="navigation_item" href="#">Network</a></li>
 			<li><a class="navigation_item" href="#">Ideas</a></li>
 			<li><a class="navigation_item" href="#">Account</a></li>
+			<% end %>
 		</ul>	
 	</div>
 	

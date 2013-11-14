@@ -46,15 +46,12 @@ class User < ActiveRecord::Base
 
   def self.encrypted_password(password, salt)
     logger.info '***********in encrypted_password***********'
-    string_to_hash = password + "wibble" + salt # 'wibble' makes it harder to guess
+    string_to_hash = password + 'wibble' + salt # 'wibble' makes it harder to guess
     Digest::SHA1.hexdigest(string_to_hash)
   end
 
   def create_new_salt
     self.salt = self.object_id.to_s + rand.to_s
   end
-
-  
-  
   
 end

@@ -1,3 +1,90 @@
 // Place all the styles related to the sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+div.login_section
+{
+  position:relative;
+  margin-left: auto;
+  margin-right: auto;
+  height:300px;
+  width:1000px;
+  border-style:solid;
+  border-width:0px;
+}
+
+.name_section
+{
+  position:relative;
+  top:60px;
+  left:350px;
+  height:30px;
+  width:300px;
+  border-style:solid;
+  border-width:0px;
+}
+
+.name_tag
+{
+  position:absolute;
+  left:10px;
+  height:30px;
+  width:100px;
+  text-align: right;
+  font-size:medium;
+  color:#4C3380;
+  border-style:solid;
+  border-width:0px;
+}
+
+.name_field
+{
+  position:absolute;
+  left:120px;
+  width:150px;
+}
+
+.password_section
+{
+  position:absolute;
+  top:90px;
+  left:350px;
+  height:30px;
+  width:300px;
+  border-style:solid;
+  border-width:0px;
+}
+
+.password_tag
+{
+  position:absolute;
+  left:10px;
+  height:30px;
+  width:100px;
+  text-align: right;
+  font-size:medium;
+  color:#4C3380;
+  border-style:solid;
+  border-width:0px;
+}
+
+.password_field
+{
+  position:absolute;
+  left:120px;
+  width:150px;
+}
+
+.login_button
+{
+  position:absolute;
+  top:130px;
+  left:500px;
+  height:30px;
+  width:50px;
+  color:#4C3380;
+  font-weight:bold; 
+  background-color:#C2D699;
+  border-width : 0px;
+}
