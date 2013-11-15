@@ -1,29 +1,26 @@
+
+<div class="login_section">
+
 <%= form_for(@user) do |f| %>
   <% if @user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
-
-      <ul>
       <% @user.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
+        <% flash.now[:alert] = msg %>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :password %><br>
-    <%= f.text_field :password %>
-  </div>
-  <div class="field">
-    <%= f.label :password_confirmation %><br>
-    <%= f.text_field :password_confirmation %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+	<div class="name_section">
+  		<%= f.label :name, "Name", :class => 'name_tag' %>
+		<%= f.text_field :name, :class => 'name_field' %>
+  	</div>
+  	<div class="password_section">
+		<%= f.label :password, "Password", :class => 'password_tag' %> 
+		<%= f.password_field :password, :class => 'password_field' %>
+  	</div>
+  	<div class="password_confirmation_section">
+		<%= f.label :password_confirmation, "Retype Password", :class => 'password_tag' %> 
+		<%= f.password_field :password_confirmation, :class => 'password_field' %>  	</div>
+	<div class="actions">
+		<%= f.submit "Join", :class => 'login_button' %>
+	</div>
 <% end %>
+
+</div>

@@ -134,7 +134,21 @@ div.notification
 	border-width:0px;
 }
 
+.flash_error
+{
+	font-size:small;
+	font-weight:bold;
+	color:red;  
+}
+
 .flash_alert
+{
+	font-size:small;
+	font-weight:bold;
+	color:brown;  
+}
+
+.flash_notice
 {
 	font-size:small;
 	font-weight:bold;

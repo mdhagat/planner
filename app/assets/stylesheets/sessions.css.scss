@@ -18,9 +18,9 @@ div.login_section
 {
   position:relative;
   top:60px;
-  left:350px;
+  left:300px;
   height:30px;
-  width:300px;
+  width:350px;
   border-style:solid;
   border-width:0px;
 }
@@ -30,7 +30,7 @@ div.login_section
   position:absolute;
   left:10px;
   height:30px;
-  width:100px;
+  width:150px;
   text-align: right;
   font-size:medium;
   color:#4C3380;
@@ -41,7 +41,7 @@ div.login_section
 .name_field
 {
   position:absolute;
-  left:120px;
+  left:170px;
   width:150px;
 }
 
@@ -49,9 +49,20 @@ div.login_section
 {
   position:absolute;
   top:90px;
-  left:350px;
+  left:300px;
   height:30px;
-  width:300px;
+  width:350px;
+  border-style:solid;
+  border-width:0px;
+}
+
+.password_confirmation_section
+{
+  position:absolute;
+  top:120px;
+  left:300px;
+  height:30px;
+  width:350px;
   border-style:solid;
   border-width:0px;
 }
@@ -61,7 +72,7 @@ div.login_section
   position:absolute;
   left:10px;
   height:30px;
-  width:100px;
+  width:150px;
   text-align: right;
   font-size:medium;
   color:#4C3380;
@@ -72,15 +83,15 @@ div.login_section
 .password_field
 {
   position:absolute;
-  left:120px;
+  left:170px;
   width:150px;
 }
 
 .login_button
 {
   position:absolute;
-  top:130px;
-  left:500px;
+  top:160px;
+  left:480px;
   height:30px;
   width:50px;
   color:#4C3380;
