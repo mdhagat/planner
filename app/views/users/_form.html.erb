@@ -5,6 +5,7 @@
   <% if @user.errors.any? %>
       <% @user.errors.full_messages.each do |msg| %>
         <% flash.now[:alert] = msg %>
+      <% end %>
   <% end %>
 
 	<div class="name_section">
