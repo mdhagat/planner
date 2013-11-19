@@ -25,7 +25,10 @@ class UsersController < ApplicationController
   # POST /users.json
   def create
     @user = User.new(user_params)
-
+    @user.profile = Profile.new
+    @user.profile.user_id = @user.id
+    @user.profile.role = 'customer'
+    
     respond_to do |format|
       if @user.save
         format.html { redirect_to @user, notice: 'User was successfully created.' }

@@ -4,11 +4,11 @@
 	
 	<div class="access">
 		<ul id="access_menu">
-			<% if session[:user_id] %>
-				<% if User.find(session[:user_id]).profile %>
-					<li>Welcome <%= User.find(session[:user_id]).profile.first_name %>! </li>
+			<% if signed_in? %>
+				<% if current_user.profile.first_name %>
+					<li>Welcome <%= current_user.profile.first_name %>! </li>
 				<% else %>
-					<li>Welcome <%= User.find(session[:user_id]).name %>!</li>
+					<li>Welcome <%= current_user.name %>!</li>
 				<% end %>
 				<li> <%= link_to 'Sign Out', logout_path %></li>
 			<% else %>
@@ -30,12 +30,12 @@
 	
 	<div class="navigation">
 		<ul id="navigation_menu">
-			<% if session[:user_id] %>
-			<li><a class="navigation_item" href="#">Home</a></li>
-			<li><a class="navigation_item" href="#">Plans</a></li>
+			<% if signed_in? %>
+			<li><a class="navigation_item" href="/">Home</a></li>
+			<li><a class="navigation_item" href="/plans">Plans</a></li>
 			<li><a class="navigation_item" href="#">Network</a></li>
 			<li><a class="navigation_item" href="#">Ideas</a></li>
-			<li><a class="navigation_item" href="#">Account</a></li>
+			<li><a class="navigation_item" href="/profiles/<%= current_user.profile.id %>">Account</a></li>
 			<% end %>
 		</ul>	
 	</div>

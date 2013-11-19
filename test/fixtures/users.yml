@@ -4,11 +4,11 @@
 admin:
   id: 1
   name: admin
-  hashed_password: cc50f7bc3a222c330a3d244bcba1ff0253bc17dc
-  salt: 387094600.647827580368466
-# cust/cust123
+  hashed_password: 'ae2d0651c5ec1bf74a6e9b1b81afe5465fb4f9b4'
+  salt: '357030400.10544064020730337'
+# customer/customer123
 customer:
   id: 2
   name: customer
-  hashed_password: d4cd917275cb0bb1e454e1aee6753826f96493fe
-  salt: 389924800.157265888219656
+  hashed_password: '92363d0faec0dfebf94cd0e4031a02c80dc991ac'
+  salt: '357037800.9675243226744973'

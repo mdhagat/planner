@@ -18,8 +18,9 @@
   	</div>
   	<div class="password_confirmation_section">
 		<%= f.label :password_confirmation, "Retype Password", :class => 'password_tag' %> 
-		<%= f.password_field :password_confirmation, :class => 'password_field' %>  	</div>
-	<div class="actions">
+		<%= f.password_field :password_confirmation, :class => 'password_field' %>
+  	</div>
+	<div class="login_button_section">
 		<%= f.submit "Join", :class => 'login_button' %>
 	</div>
 <% end %>
