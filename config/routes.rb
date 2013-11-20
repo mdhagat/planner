@@ -84,5 +84,6 @@ Planner::Application.routes.draw do
   
   get '/daybyday' => "segments#daybyday", :as => "daybyday"
   get '/summary' => "segments#summary", :as => "summary"
+  get '/choose' => "segments#choose", :as => "choose"
 
 end

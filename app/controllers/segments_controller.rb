@@ -23,9 +23,7 @@ class SegmentsController < ApplicationController
 
   # GET /daybyday
   def daybyday
-
     respond_to do |format|
-      format.html # index.html.erb
       format.js {}
       format.json { }
     end
@@ -33,11 +31,17 @@ class SegmentsController < ApplicationController
 
   # GET /summary
   def summary
-
     respond_to do |format|
-      format.html # index.html.erb
       format.js {}
       format.json { }
+    end
+  end
+  
+    # GET /choose
+  def choose
+    @segments = Segment.all
+    respond_to do |format|
+      format.html # choose.html.erb
     end
   end
 

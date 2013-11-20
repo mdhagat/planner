@@ -14,7 +14,7 @@
 				<div class="segment_text"> <%= segment.description %> </div> 
 			</div> 
 			<%= link_to 'Day by Day', daybyday_url(:id => segment.id), :class => "segment_show", :remote => :true %>
-			<%= link_to 'Swap', daybyday_url(:id => segment.id), :class => "segment_swap"%>			
+			<%= link_to 'Swap', choose_url(:id => segment.id), :class => "segment_swap"%>			
 		</div>    
 
         <br/>

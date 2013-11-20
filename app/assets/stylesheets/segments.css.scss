@@ -1,3 +1,101 @@
 // Place all the styles related to the segments controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+div.segment
+{
+  position:relative;
+  height:140px;
+  width:850px;
+  margin:auto;
+  background-color:#F5F0E6;
+}
+
+div.segment_choose
+{
+  position:relative;
+  height:140px;
+  width:850px;
+  margin:auto;
+//  border-style:solid;
+//  border-width:1px;
+}
+
+div.segment_radio
+{
+  position:absolute;
+  top:60px;
+  left:50px;
+  height:20px;
+  width:20px;
+
+}
+
+div.segment_selection
+{
+  position:absolute;
+  left:100px;
+  height:140px;
+  width:750px;
+  background-color:#F5F0E6;
+//  border-style:solid;
+//  border-width:1px;
+}
+
+img.segment_img
+{
+  position:absolute;
+  top:20px;
+  left:15px;
+  height:100px;
+  width:100px;
+//  border-style:solid;
+}
+
+div.segment_desc
+{
+  position:absolute;
+  top:10px;
+  left:150px;
+  height:90px;
+  width:550px;
+  //background-color:white;
+  text-align:left;
+  font-size:small;
+  color:#47476B;
+  padding:5px;
+  margin:0px;
+//  border-style:solid;
+}
+
+div.segment_title
+{
+  position:absolute;
+  font-size:medium;
+  font-weight: bold;
+//  color:#4C3380;
+}
+
+a.segment_show
+{
+  position:absolute;
+  top:15px;
+  right:15px;
+  text-align:left;
+  font-size:small;
+  color:#47476B;
+  padding:5px;
+}
+
+a.segment_swap
+{
+  position:absolute;
+  bottom:15px;
+  right:15px;
+  text-align:left;
+  font-size:small;
+  color:#47476B;
+  padding:5px;
+}
+

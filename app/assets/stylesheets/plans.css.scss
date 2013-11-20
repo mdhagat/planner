@@ -19,76 +19,6 @@ div.plan_heading
 }
 
 //
-// For Plan Details
-//
-
-div.segment
-{
-  position:relative;
-  height:140px;
-  width:850px;
-  margin:auto;
-  background-color:#F5F0E6;
-//  border-style:solid;
-}
-
-img.segment_img
-{
-  position:absolute;
-  top:20px;
-  left:15px;
-  height:100px;
-  width:100px;
-//  border-style:solid;
-}
-
-div.segment_desc
-{
-  position:absolute;
-  top:10px;
-  left:150px;
-  height:90px;
-  width:550px;
-  //background-color:white;
-  text-align:left;
-  font-size:small;
-  color:#47476B;
-  padding:5px;
-  margin:0px;
-//  border-style:solid;
-}
-
-div.segment_title
-{
-  position:absolute;
-  font-size:medium;
-  font-weight: bold;
-//  color:#4C3380;
-}
-
-a.segment_show
-{
-  position:absolute;
-  top:15px;
-  right:15px;
-  text-align:left;
-  font-size:small;
-  color:#47476B;
-  padding:5px;
-}
-
-a.segment_swap
-{
-  position:absolute;
-  bottom:15px;
-  right:15px;
-  text-align:left;
-  font-size:small;
-  color:#47476B;
-  padding:5px;
-}
-
-//
 //  For Plan Listing
 //
 
@@ -133,6 +63,8 @@ div.plan_desc
   text-align:left;
   font-size:small;
   color:#47476B;
+  padding:5px;
+  margin:0px;
 //  border-style:solid;
 //  border-width:1px;
 }
