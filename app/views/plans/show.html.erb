@@ -1,19 +1,20 @@
-<p id="notice"><%= notice %></p>
 
+	<br/>
 
 	<div class="plan_heading"> Your Plan: <%= @plan.description %> </div>
 	<br/>
 
     <% @plan.segments.each do |segment| %>
     
-		<div class="segment">
+		<div class="segment" draggable = "true">
 			<%= image_tag(segment.thumbnail, :class => "segment_img") %>	
 			<div class="segment_desc"> 
 				<div class="segment_title"> <%= segment.name %> </div> 
 				<br/> <br/>
 				<div class="segment_text"> <%= segment.description %> </div> 
 			</div> 
-			<%= link_to 'Day by Day', daybyday_url(:id => segment.id), :class => "segment_show", :remote => :true %>		
+			<%= link_to 'Day by Day', daybyday_url(:id => segment.id), :class => "segment_show", :remote => :true %>
+			<%= link_to 'Swap', daybyday_url(:id => segment.id), :class => "segment_swap"%>			
 		</div>    
 
         <br/>

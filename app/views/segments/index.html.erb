@@ -1,35 +1,18 @@
-<h1>Listing segments</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Thumbnail</th>
-      <th>Plan</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+	<br/>
 
-
-
-  <tbody>
     <% @segments.each do |segment| %>
-      <tr>
-        <td><%= segment.name %></td>
-        <td><%= segment.description %></td>
-        <td><%= segment.thumbnail %></td>
-        <td><%= segment.plan_id %></td>
-        <td><%= link_to 'Show', segment %></td>
-        <td><%= link_to 'Edit', edit_segment_path(segment) %></td>
-        <td><%= link_to 'Destroy', segment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+    
+		<div class="segment" draggable = "true">
+			<%= image_tag(segment.thumbnail, :class => "segment_img") %>	
+			<div class="segment_desc"> 
+				<div class="segment_title"> <%= segment.name %> </div> 
+				<br/> <br/>
+				<div class="segment_text"> <%= segment.description %> </div> 
+			</div> 
+			<%= link_to 'Day by Day', daybyday_url(:id => segment.id), :class => "segment_show", :remote => :true %>		
+		</div>    
+
+        <br/>
+
     <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Segment', new_segment_path %>

@@ -18,6 +18,10 @@ div.plan_heading
 //  border-style:solid;
 }
 
+//
+// For Plan Details
+//
+
 div.segment
 {
   position:relative;
@@ -72,4 +76,104 @@ a.segment_show
   color:#47476B;
   padding:5px;
 }
+
+a.segment_swap
+{
+  position:absolute;
+  bottom:15px;
+  right:15px;
+  text-align:left;
+  font-size:small;
+  color:#47476B;
+  padding:5px;
+}
+
+//
+//  For Plan Listing
+//
+
+div.plan
+{
+  position:relative;
+  height:90px;
+  width:850px;
+  margin:auto;
+  background-color:#F5F0E6;
+//  border-style:solid;
+//  border-width:1px;
+}
+
+div.plan_pictures
+{
+  position:absolute;
+  top:10px;
+  left:410px;
+  height:70px;
+  width:300px;
+//  border-style:solid;
+//  border-width:1px;
+}
+
+img.plan_img
+{
+  position:relative;
+  height:60px;
+  width:60px;
+  padding:5px;
+  float:left;
+}
+
+div.plan_desc
+{
+  position:absolute;
+  top:10px;
+  left:10px;
+  height:70px;
+  width:400px;
+  text-align:left;
+  font-size:small;
+  color:#47476B;
+//  border-style:solid;
+//  border-width:1px;
+}
+
+div.plan_title
+{
+  position:absolute;
+  font-size:medium;
+  font-weight: bold;
+//  color:#4C3380;
+}
+
+a.plan_show
+{
+  position:absolute;
+  top:10px;
+  right:15px;
+  text-align:left;
+  font-size:small;
+  color:#47476B;
+  padding:5px;
+}
+a.plan_edit
+{
+  position:absolute;
+  top:30px;
+  right:15px;
+  text-align:left;
+  font-size:small;
+  color:#47476B;
+  padding:5px;
+}
+a.plan_destroy
+{
+  position:absolute;
+  top:50px;
+  right:15px;
+  text-align:left;
+  font-size:small;
+  color:#47476B;
+  padding:5px;
+}
+
 
