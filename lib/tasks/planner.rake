@@ -1,6 +1,6 @@
 namespace :planner do
   desc "Reset the planner application environment"
-    task :reset_data => :environment do
+  task :reset_db => :environment do
     Rake::Task["db:migrate"].invoke
     Rake::Task["db:fixtures:load"].invoke
   end  
@@ -9,7 +9,7 @@ namespace :planner do
     exec "rake planner:reset_data"
   end  
   task :reset_prod => :environment do
-    exec "heroku pg:reset postgres --confirm limitless-lake-2862"
-    exec "heroku run:detached rake planner:reset_data"
+    Bundler.with_clean_env { sh 'heroku pg:reset postgres --confirm limitless-lake-2862' }  
+    Bundler.with_clean_env { sh 'heroku run:detached rake planner:reset_db' }  
   end
 end
