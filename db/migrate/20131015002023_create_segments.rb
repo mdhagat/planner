@@ -4,6 +4,7 @@ class CreateSegments < ActiveRecord::Migration
       t.string :name
       t.text :description
       t.text :thumbnail
+      t.integer :orig_segment_id
       t.integer :plan_id
 
       t.timestamps

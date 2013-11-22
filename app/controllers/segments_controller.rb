@@ -37,11 +37,19 @@ class SegmentsController < ApplicationController
     end
   end
   
-    # GET /choose
+  # GET /choose
   def choose
-    @segments = Segment.all
+    @segments = Segment.select{ |segment| segment.plan_id.nil? }
     respond_to do |format|
       format.html # choose.html.erb
+    end
+  end
+
+  # GET /swap
+  def swap
+    Plan.swap(params[:plan_id], params[:orig_segment_id], params[:new_segment_id])
+    respond_to do |format|
+      format.html { redirect_to plan_url(params[:plan_id]) }
     end
   end
 

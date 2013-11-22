@@ -7,14 +7,15 @@
     <% @plan.segments.each do |segment| %>
     
 		<div class="segment" draggable = "true">
-			<%= image_tag(segment.thumbnail, :class => "segment_img") %>	
+			<%= image_tag(segment.get_thumbnail, :class => "segment_img") %>	
 			<div class="segment_desc"> 
-				<div class="segment_title"> <%= segment.name %> </div> 
+				<div class="segment_title"> <%= segment.get_name %> </div> 
 				<br/> <br/>
-				<div class="segment_text"> <%= segment.description %> </div> 
+				<div class="segment_text"> <%= segment.get_description %> </div> 
 			</div> 
-			<%= link_to 'Day by Day', daybyday_url(:id => segment.id), :class => "segment_show", :remote => :true %>
-			<%= link_to 'Swap', choose_url(:id => segment.id), :class => "segment_swap"%>			
+			<%= link_to 'Day by Day', daybyday_url(:id => segment.orig_segment_id), :class => "segment_show", :remote => :true %>
+			<%= link_to 'Delete', segment, method: :delete, :class => "segment_delete", data: { confirm: 'Are you sure?' } %>
+			<%= link_to 'Swap', choose_url(:segment_id => segment.id, :plan_id => @plan.id), :class => "segment_swap"%>			
 		</div>    
 
         <br/>

@@ -1,12 +1,12 @@
-
-	<br/>
+<br/>
+<%= form_tag swap_path do %>
 
     <% @segments.each do |segment| %>
     
 		<div class="segment_choose">
 			
 			<div class="segment_radio">
-				<%= radio_button_tag 'chosen_segment', segment.id %>
+				<%= radio_button_tag 'new_segment_id', segment.id %>
 			</div>
 			<div class="segment_selection">
 				<%= image_tag(segment.thumbnail, :class => "segment_img") %>	
@@ -22,3 +22,12 @@
         <br/>
 
     <% end %>
+    <%= hidden_field_tag "plan_id", params[:plan_id] %> 
+    <%= hidden_field_tag "orig_segment_id", params[:segment_id] %> 
+	<div class="segment_choose_buttons">
+		<%= submit_tag 'Go', :class => 'segment_button' %>
+		<%= submit_tag 'Skip', :class => 'segment_button' %>
+	</div>
+
+<% end %>		
+</br>

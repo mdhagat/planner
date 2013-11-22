@@ -88,6 +88,17 @@ a.segment_show
   padding:5px;
 }
 
+a.segment_delete
+{
+  position:absolute;
+  top:60px;
+  right:15px;
+  text-align:left;
+  font-size:small;
+  color:#47476B;
+  padding:5px;
+}
+
 a.segment_swap
 {
   position:absolute;
@@ -99,3 +110,26 @@ a.segment_swap
   padding:5px;
 }
 
+
+div.segment_choose_buttons
+{
+  position:relative;
+  height:100px;
+  width:850px;
+  margin:auto;
+  text-align:left;
+//  border-style:solid;
+//  border-width:1px;
+}
+
+.segment_button
+{
+  position:relative;
+  height:30px;
+  width:50px;
+  color:#4C3380;
+  font-weight:bold; 
+  margin:10px;
+  background-color:#C2D699;
+  border-width : 0px;
+}

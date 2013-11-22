@@ -14,8 +14,9 @@
 				<div class="plan_text"> <%= plan.description %> </div> 
 			</div> 
 			<div class="plan_pictures"> 
-				<% plan.segments.each do |segment| %>
-					<%= image_tag(segment.thumbnail, :class => "plan_img") %>
+				<% plan.segments.each_with_index do |segment,index| %>
+					<%= image_tag(segment.get_thumbnail, :class => "plan_img") %>
+					<% break if index == 2 %>
 				<% end %>
  			</div> 
         	<%= link_to 'Show', plan, :class => "plan_show" %>

@@ -1,45 +1,70 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-plan01segment01:
+
+segment001:
   id: 1
   name: Five days in London and Bath 
   description: "Best of London and Bath. In London, Tower of London, the new London Eye, and War Museum. In Bath, Stonehenge, quaint villages and the Roman Baths."
   thumbnail: bath.jpg
-  plan_id: 1
 
-plan01segment02:
+segment002:
   id: 2
   name: Three days in Amsterdam
   description: "Experience the Amsterdam Canals and the Tulip Market. Visit the Anne Frank House. Take a day to the typical Dutch villages of Volendam and Marken."
   thumbnail: amsterdam.jpg
-  plan_id: 1
   
-plan01segment03:
+segment003:
   id: 3
   name: Five days in Lake Como
   description: "Leisure in the Lakes Region north of Milan. Use Verrana as your base and explore lakeside towns of Bellagio and Como."
   thumbnail: lakecomo.jpg
-  plan_id: 1
 
-plan02segment01:
+segment004:
   id: 4
   name: Three days in Barcelona
   description: "Experience the colorful Las Ramblas Street. Visit Gaudi's Casa Batlo and the Sagrada Familia Church. Sample Tapas and walk to the Olympic Harbor."
   thumbnail: barcelona.jpg
-  plan_id: 2
 
-plan02segment02:
+segment005:
   id: 5
   name: Three days in Berlin
   description: "Visit the Berlin Wall and Checkpoint Charlie. Tour the Bundestag and take on the Neues Museum. Enjoy the Berlin Zoo and visit the Beer Gardens."
   thumbnail: berlin.jpg
-  plan_id: 2
 
-plan02segment03:
+segment006:
   id: 6
   name: Three days in Vienna
   description: "Tour the Hofburg Palace and the Opera House. Experience the Sisi Museum and Mozart Memorial. Take a tea and Sachertorte break."
   thumbnail: vienna.jpg
+
+plan01segment01:
+  id: 101
+  orig_segment_id: 1
+  plan_id: 1
+
+plan01segment02:
+  id: 102
+  orig_segment_id: 2
+  plan_id: 1
+  
+plan01segment03:
+  id: 103
+  orig_segment_id: 3
+  plan_id: 1
+
+plan02segment01:
+  id: 104
+  orig_segment_id: 4
+  plan_id: 2
+
+plan02segment02:
+  id: 105
+  orig_segment_id: 5
+  plan_id: 2
+
+plan02segment03:
+  id: 106
+  orig_segment_id: 6
   plan_id: 2
 
  
