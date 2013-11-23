@@ -105,6 +105,7 @@ ActiveRecord::Schema.define(version: 20131015003101) do
     t.text     "thumbnail"
     t.integer  "orig_segment_id"
     t.integer  "plan_id"
+    t.integer  "order_in_plan"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

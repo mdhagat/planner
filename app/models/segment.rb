@@ -1,15 +1,9 @@
 class Segment < ActiveRecord::Base
+  after_initialize :set_orig_segment
   belongs_to :plan
   has_many :days
-  
-  def load_orig_segment
-    if @orig_segment.nil?
-      @orig_segment = Segment.find(self.orig_segment_id)
-    end
-  end
     
   def get_name
-    load_orig_segment
     if self.name.nil?
       return @orig_segment.name
     else
@@ -18,7 +12,6 @@ class Segment < ActiveRecord::Base
   end
   
   def get_description
-    load_orig_segment
     if self.name.nil?
       return @orig_segment.description
     else
@@ -27,7 +20,6 @@ class Segment < ActiveRecord::Base
   end
   
   def get_thumbnail
-    load_orig_segment
     if self.name.nil?
       return @orig_segment.thumbnail
     else
@@ -36,8 +28,18 @@ class Segment < ActiveRecord::Base
   end
 
   def get_days
-    load_orig_segment
-    return @orig_segment.days
+    if self.days.nil?
+      return @orig_segment.days
+    else
+      return self.days
+    end
+  end
+
+private
+  def set_orig_segment
+    if self.orig_segment_id
+      @orig_segment = Segment.find(self.orig_segment_id)
+    end
   end
   
 end

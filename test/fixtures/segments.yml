@@ -38,33 +38,38 @@ segment006:
   thumbnail: vienna.jpg
 
 plan01segment01:
-  id: 101
+  id: 201
   orig_segment_id: 1
-  plan_id: 1
+  plan_id: 101
+  order_in_plan: 1
 
 plan01segment02:
-  id: 102
+  id: 202
   orig_segment_id: 2
-  plan_id: 1
+  plan_id: 101
+  order_in_plan: 2
   
 plan01segment03:
-  id: 103
+  id: 203
   orig_segment_id: 3
-  plan_id: 1
-
+  plan_id: 101
+  order_in_plan: 3
+  
 plan02segment01:
-  id: 104
+  id: 204
   orig_segment_id: 4
-  plan_id: 2
+  plan_id: 102
+  order_in_plan: 1
 
 plan02segment02:
-  id: 105
+  id: 205
   orig_segment_id: 5
-  plan_id: 2
-
+  plan_id: 102
+  order_in_plan: 2
+  
 plan02segment03:
-  id: 106
+  id: 206
   orig_segment_id: 6
-  plan_id: 2
-
+  plan_id: 102
+  order_in_plan: 3
  

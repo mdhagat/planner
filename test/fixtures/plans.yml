@@ -1,17 +1,23 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
+plan001:
   id: 1
   name: Introduction to Europe
   description: London, Bath, Amsterdam and Lake Como
   thumbnail: europe.jpg
-  orig_plan_id: 1
-  user_id: 1
 
-two:
+plan002:
   id: 2
   name: Spain Germany and England
   description: Family trip across Europe
   thumbnail: spain.jpg
+  
+userplan001:
+  id: 101
+  orig_plan_id: 1
+  user_id: 1
+  
+userplan002:
+  id: 102
   orig_plan_id: 2
   user_id: 2

@@ -9,19 +9,19 @@
  		<div class="plan">   
 
 			<div class="plan_desc"> 
-				<div class="plan_title"> <%= plan.name %> </div> 
+				<div class="plan_title"> <%= plan.get_name %> </div> 
 				<br/> <br/>
-				<div class="plan_text"> <%= plan.description %> </div> 
+				<div class="plan_text"> <%= plan.get_description %> </div> 
 			</div> 
 			<div class="plan_pictures"> 
-				<% plan.segments.each_with_index do |segment,index| %>
+				<% plan.get_segments.each_with_index do |segment,index| %>
 					<%= image_tag(segment.get_thumbnail, :class => "plan_img") %>
-					<% break if index == 2 %>
+					<% break if index == 3 %>
 				<% end %>
  			</div> 
         	<%= link_to 'Show', plan, :class => "plan_show" %>
      		<%= link_to 'Edit', edit_plan_path(plan), :class => "plan_edit"%>
-        	<%= link_to 'Destroy', plan, method: :delete, data: { confirm: 'Are you sure?' }, :class => "plan_destroy" %>
+        	<%= link_to 'Delete', plan, method: :delete, data: { confirm: 'Are you sure?' }, :class => "plan_destroy" %>
         	
    		</div>    
 
