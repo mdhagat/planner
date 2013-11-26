@@ -39,7 +39,7 @@ class SegmentsController < ApplicationController
   
   # GET /choose
   def choose
-    @segments = Segment.select{ |segment| segment.plan_id.nil? }
+    @segments = Segment.select{ |segment| segment.orig_segment_id.nil? }
     respond_to do |format|
       format.html # choose.html.erb
     end

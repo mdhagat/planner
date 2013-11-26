@@ -2,7 +2,7 @@ $('.wizard_question').replaceWith('<p class="wizard_question">How long will the 
 $('.wizard_steps').replaceWith('<img class="wizard_steps" src="images/step_three.jpg"></img>')
 $('.wizard_form').replaceWith('\
 		<div class="wizard_form"> \
-			<%= form_tag("plans/1", :method => "get", :class => "wizard_body") do %> \
+			<%= form_tag(plan_path(recommend(params[:user_id])), :method => "get", :class => "wizard_body") do %> \
 				<%= hidden_field_tag "where", params[:where] %> \
 				<%= hidden_field_tag "countries", params[:countries] %> \
 				<%= hidden_field_tag "who", params[:who] %> \

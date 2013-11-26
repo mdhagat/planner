@@ -2,6 +2,14 @@ class Segment < ActiveRecord::Base
   after_initialize :set_orig_segment
   belongs_to :plan
   has_many :days
+
+  def get_orig_segment_id
+    if self.orig_segment_id.nil?
+      return self.id
+    else
+      return self.orig_segment_id
+    end
+  end
     
   def get_name
     if self.name.nil?

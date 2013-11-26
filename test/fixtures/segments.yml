@@ -1,6 +1,6 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-
+# Seed segments 
 segment001:
   id: 1
   name: Five days in London and Bath 
@@ -36,7 +36,52 @@ segment006:
   name: Three days in Vienna
   description: "Tour the Hofburg Palace and the Opera House. Experience the Sisi Museum and Mozart Memorial. Take a tea and Sachertorte break."
   thumbnail: vienna.jpg
+  
+segment007:
+  id: 7
+  name: San Francisco to London
+  description: "United leaves Noon and arrives 9am next day"
+  thumbnail: flight.gif
 
+segment008:
+  id: 8
+  name: London to San Francisco
+  description: "United leaves 11am and arrives 1pm same day"
+  thumbnail: flight.gif
+
+# Segments generated for recommended plans
+
+recommened_plan01_segment01:
+  id: 21
+  orig_segment_id: 7
+  plan_id: 11
+  order_in_plan: 1
+  
+recommened_plan01_segment02:
+  id: 22
+  orig_segment_id: 1
+  plan_id: 11
+  order_in_plan: 2
+
+recommened_plan01_segment03:
+  id: 23
+  orig_segment_id: 2
+  plan_id: 11
+  order_in_plan: 3
+  
+recommened_plan01_segment04:
+  id: 24
+  orig_segment_id: 3
+  plan_id: 11
+  order_in_plan: 4
+
+recommened_plan01_segment05:
+  id: 25
+  orig_segment_id: 8
+  plan_id: 11
+  order_in_plan: 5  
+  
+# Segments for User specific plans
 plan01segment01:
   id: 201
   orig_segment_id: 1
