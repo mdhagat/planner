@@ -1,18 +1,10 @@
 class Segment < ActiveRecord::Base
-  after_initialize :set_orig_segment
+  after_find :set_orig_segment
   belongs_to :plan
   has_many :days
 
-  def get_orig_segment_id
-    if self.orig_segment_id.nil?
-      return self.id
-    else
-      return self.orig_segment_id
-    end
-  end
-    
   def get_name
-    if self.name.nil?
+    if self.orig_segment_id
       return @orig_segment.name
     else
       return self.name
@@ -20,7 +12,7 @@ class Segment < ActiveRecord::Base
   end
   
   def get_description
-    if self.name.nil?
+    if self.orig_segment_id
       return @orig_segment.description
     else
       return self.description
@@ -28,15 +20,28 @@ class Segment < ActiveRecord::Base
   end
   
   def get_thumbnail
-    if self.name.nil?
+    if self.orig_segment_id
       return @orig_segment.thumbnail
     else
       return self.thumbnail
     end
   end
 
+  def get_segment_type
+    if self.orig_segment_id
+      return @orig_segment.segment_type
+    else
+      return self.segment_type
+    end
+  end
+  
+  def is_air?
+    self.get_segment_type == 'air'
+  end
+
   def get_days
-    if self.days.nil?
+    logger.info "----------- in get_days with orig_segment_id = " + self.orig_segment_id.to_s + "-------------"   
+    if self.orig_segment_id
       return @orig_segment.days
     else
       return self.days
@@ -45,7 +50,9 @@ class Segment < ActiveRecord::Base
 
 private
   def set_orig_segment
+    logger.info "----------- in set_orig_segment with orig_segment_id = " + self.orig_segment_id.to_s + "-------------"    
     if self.orig_segment_id
+      logger.info " ****** found orig_segment *******"
       @orig_segment = Segment.find(self.orig_segment_id)
     end
   end

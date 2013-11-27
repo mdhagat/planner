@@ -1,6 +1,6 @@
-$('.segment_text:eq(<%= (@segment.id - 1) %>)').replaceWith(
-	'<div class="segment_text">' + '<%= @segment.description %> <br/>'	+ '</div>'
+$('.segment_text:eq(<%= (@segment.order_in_plan - 1) %>)').replaceWith(
+	'<div class="segment_text">' + '<%= @segment.get_description %> <br/>'	+ '</div>'
 )
-$('.segment_show:eq(<%= (@segment.id - 1) %>)').replaceWith(
+$('.segment_show:eq(<%= (@segment.order_in_plan - 1) %>)').replaceWith(
 	'<%= link_to "Day by Day", daybyday_url(:id => @segment.id), :class => "segment_show", :remote => :true %>'
 )

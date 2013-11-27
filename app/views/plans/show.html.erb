@@ -6,18 +6,31 @@
 
     <% @plan.segments.each do |segment| %>
     
-		<div class="segment" draggable = "true">
-			<%= image_tag(segment.get_thumbnail, :class => "segment_img") %>	
-			<div class="segment_desc"> 
-				<div class="segment_title"> <%= segment.get_name %> </div> 
-				<br/> <br/>
-				<div class="segment_text"> <%= segment.get_description %> </div> 
-			</div> 
-			<%= link_to 'Day by Day', daybyday_url(:id => segment.get_orig_segment_id), :class => "segment_show", :remote => :true %>
-			<%= link_to 'Delete', segment, method: :delete, :class => "segment_delete", data: { confirm: 'Are you sure?' } %>
-			<%= link_to 'Swap', choose_url(:segment_id => segment.id, :plan_id => @plan.id), :class => "segment_swap"%>			
-		</div>    
-
+    	<% if segment.is_air? %>
+    		<div class="segment_air" draggable = "true">
+				<%= image_tag(segment.get_thumbnail, :class => "segment_img_air") %>	
+				<div class="segment_desc_air"> 
+					<div class="segment_title"> <%= segment.get_name %> </div> 
+					<br/> <br/>
+					<div class="segment_text"> <%= segment.get_description %> </div> 
+				</div> 
+				<!-- Leave here for Day by Day functioning -->
+				<%= link_to '', daybyday_url(:id => segment.id), :class => "segment_show", :remote => :true %>
+				<%= link_to 'Swap', choose_url(:id => segment.id, :plan_id => @plan.id), :class => "segment_swap"%>		
+			</div>  
+    	<% else %>
+			<div class="segment" draggable = "true">
+				<%= image_tag(segment.get_thumbnail, :class => "segment_img") %>	
+				<div class="segment_desc"> 
+					<div class="segment_title"> <%= segment.get_name %> </div> 
+					<br/> <br/>
+					<div class="segment_text"> <%= segment.get_description %> </div> 
+				</div> 
+				<%= link_to 'Day by Day', daybyday_url(:id => segment.id), :class => "segment_show", :remote => :true %>
+				<%= link_to 'Delete', segment, method: :delete, :class => "segment_delete", data: { confirm: 'Are you sure?' } %>
+				<%= link_to 'Swap', choose_url(:id => segment.id, :plan_id => @plan.id), :class => "segment_swap"%>			
+			</div>    
+		<% end %>
         <br/>
 
     <% end %>

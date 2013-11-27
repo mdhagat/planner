@@ -42,12 +42,14 @@ segment007:
   name: San Francisco to London
   description: "United leaves Noon and arrives 9am next day"
   thumbnail: flight.gif
+  segment_type: air
 
 segment008:
   id: 8
   name: London to San Francisco
   description: "United leaves 11am and arrives 1pm same day"
   thumbnail: flight.gif
+  segment_type: air
 
 # Segments generated for recommended plans
 

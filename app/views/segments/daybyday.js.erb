@@ -1,12 +1,12 @@
-$('.segment_text:eq(<%= (@segment.id - 1) %>)').replaceWith(
-	'<div class="segment_text">'
+$('.segment_text:eq(<%= (@segment.order_in_plan - 1) %>)').replaceWith(
+	'<div class="segment_text">' 
 		<% i = 1 %>    
-		<% @segment.days.each do |day| %>
+		<% @segment.get_days.each do |day| %>
 			+ 'Day <%= i %> - <%= day.name %> <br/>'
 			<% i += 1 %>	
 		<% end %> 
 	+ '</div>'
 )
-$('.segment_show:eq(<%= (@segment.id - 1) %>)').replaceWith(
+$('.segment_show:eq(<%= (@segment.order_in_plan - 1) %>)').replaceWith(
 	'<%= link_to "Summary", summary_url(:id => @segment.id), :class => "segment_show", :remote => :true %>'
 )

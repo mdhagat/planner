@@ -96,6 +96,7 @@ class SegmentsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_segment
+      logger.info "----------- in set_segment with id = " + params[:id].to_s + "-------------"
       @segment = Segment.find(params[:id])
     end
 
