@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
     if user
       logger.info '*** create - found non-nil user ***'
       session[:user_id] = user.id
-      redirect_to root_path, :notice => "Logged in successfully"
+      redirect_to session[:last_page], :notice => "Logged in successfully"
     else
       logger.info '*** create - found nil user ***'
       flash.now[:alert] = "Invalid login/password combination"

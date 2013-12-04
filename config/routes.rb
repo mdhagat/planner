@@ -75,13 +75,16 @@ Planner::Application.routes.draw do
   #   end
   
   root 'wizards#index'
-  
-  get '/login' => "sessions#create", :as => "login"
-  get '/logout' => "sessions#destroy", :as => "logout"
-  
   get '/step_two' => "wizards#step_two", :as => "step_two"
   get '/step_three' => "wizards#step_three", :as => "step_three"
-  
+
+  # the login page
+  get '/signin' => "sessions#new" , :as => "signin"
+  # the login action
+  get '/login' => "sessions#create", :as => "login"
+  # the logout action
+  get '/logout' => "sessions#destroy", :as => "logout"
+   
   get '/daybyday' => "segments#daybyday", :as => "daybyday"
   get '/summary' => "segments#summary", :as => "summary"
   get '/choose' => "segments#choose", :as => "choose"

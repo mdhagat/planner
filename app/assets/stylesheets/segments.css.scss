@@ -15,7 +15,7 @@ div.segment
 div.segment_air
 {
   position:relative;
-  height:90px;
+  height:80px;
   width:850px;
   margin:auto;
   background-color:#F5F0E6;
@@ -67,8 +67,8 @@ img.segment_img_air
   position:absolute;
   top:0px;
   left:15px;
-  height:90px;
-  width:90px;
+  height:80px;
+  width:80px;
 }
 
 div.segment_desc
@@ -90,7 +90,7 @@ div.segment_desc_air
   position:absolute;
   top:0px;
   left:130px;
-  height:90px;
+  height:80px;
   width:600px;
   text-align:left;
   font-size:small;
@@ -118,18 +118,7 @@ div.segment_text
 a.segment_show
 {
   position:absolute;
-  top:15px;
-  right:15px;
-  text-align:left;
-  font-size:small;
-  color:#47476B;
-  padding:5px;
-}
-
-a.segment_delete
-{
-  position:absolute;
-  top:60px;
+  bottom:15px;
   right:15px;
   text-align:left;
   font-size:small;
@@ -140,7 +129,7 @@ a.segment_delete
 a.segment_swap
 {
   position:absolute;
-  bottom:15px;
+  top:15px;
   right:15px;
   text-align:left;
   font-size:small;

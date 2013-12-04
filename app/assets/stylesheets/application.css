@@ -137,22 +137,22 @@ div.notification
 .flash_error
 {
 	font-size:small;
-	font-weight:bold;
+//	font-weight:bold;
 	color:red;  
 }
 
 .flash_alert
 {
 	font-size:small;
-	font-weight:bold;
+//	font-weight:bold;
 	color:brown;  
 }
 
 .flash_notice
 {
 	font-size:small;
-	font-weight:bold;
-	color:slateblue;  
+//	font-weight:bold;
+	color:#0099FF;  
 }
 
 div.navigation

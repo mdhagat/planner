@@ -1,5 +1,6 @@
 class SegmentsController < ApplicationController
   before_action :set_segment, only: [:show, :edit, :update, :destroy, :daybyday, :summary]
+  before_action :signed_in_user, only: [:choose]
 
   # GET /segments
   # GET /segments.json
@@ -39,7 +40,7 @@ class SegmentsController < ApplicationController
   
   # GET /choose
   def choose
-    @segments = Segment.select{ |segment| segment.orig_segment_id.nil? }
+  @segments = Segment.select{ |segment| segment.orig_segment_id.nil? }
     respond_to do |format|
       format.html # choose.html.erb
     end
@@ -96,7 +97,6 @@ class SegmentsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_segment
-      logger.info "----------- in set_segment with id = " + params[:id].to_s + "-------------"
       @segment = Segment.find(params[:id])
     end
 
@@ -104,4 +104,13 @@ class SegmentsController < ApplicationController
     def segment_params
       params.require(:segment).permit(:name, :description, :thumbnail, :plan_id)
     end
+    
+    # Save path to return to and redirect to login page
+    def signed_in_user
+      unless signed_in?
+        store_location
+        redirect_to new_session_path, notice: "But first, please sign in."
+      end
+    end
+    
 end

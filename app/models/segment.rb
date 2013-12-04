@@ -40,8 +40,7 @@ class Segment < ActiveRecord::Base
   end
 
   def get_days
-    logger.info "----------- in get_days with orig_segment_id = " + self.orig_segment_id.to_s + "-------------"   
-    if self.orig_segment_id
+     if self.orig_segment_id
       return @orig_segment.days
     else
       return self.days
@@ -50,9 +49,7 @@ class Segment < ActiveRecord::Base
 
 private
   def set_orig_segment
-    logger.info "----------- in set_orig_segment with orig_segment_id = " + self.orig_segment_id.to_s + "-------------"    
     if self.orig_segment_id
-      logger.info " ****** found orig_segment *******"
       @orig_segment = Segment.find(self.orig_segment_id)
     end
   end

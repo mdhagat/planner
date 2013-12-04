@@ -27,7 +27,6 @@
 					<div class="segment_text"> <%= segment.get_description %> </div> 
 				</div> 
 				<%= link_to 'Day by Day', daybyday_url(:id => segment.id), :class => "segment_show", :remote => :true %>
-				<%= link_to 'Delete', segment, method: :delete, :class => "segment_delete", data: { confirm: 'Are you sure?' } %>
 				<%= link_to 'Swap', choose_url(:id => segment.id, :plan_id => @plan.id), :class => "segment_swap"%>			
 			</div>    
 		<% end %>
