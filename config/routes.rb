@@ -83,7 +83,10 @@ Planner::Application.routes.draw do
   # the login action
   get '/login' => "sessions#create", :as => "login"
   # the logout action
-  get '/logout' => "sessions#destroy", :as => "logout"
+  delete '/logout' => "sessions#destroy", :as => "logout"
+   
+  get '/customize' => "plans#customize", :as => "customize" 
+  post '/save_plan' => "plans#save_for_user", :as => "save_plan" 
    
   get '/daybyday' => "segments#daybyday", :as => "daybyday"
   get '/summary' => "segments#summary", :as => "summary"

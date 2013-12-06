@@ -1,21 +1,23 @@
 class SessionsController < ApplicationController
   
+  # the New action shows the login page
+  
+  # the Login action
   def create
     user = User.authenticate(params[:name], params[:password])
     if user
-      logger.info '*** create - found non-nil user ***'
       session[:user_id] = user.id
-      redirect_to session[:last_page], :notice => "Logged in successfully"
+      redirect_back_or root_url, "Logged in successfully"
     else
-      logger.info '*** create - found nil user ***'
       flash.now[:alert] = "Invalid login/password combination"
       render :action => 'new'
     end
   end
 
+  # the Logout action
   def destroy
     reset_session
-    redirect_to root_path, :notice => "You successfully logged out"
+    redirect_back_or root_url, "You successfully logged out"
   end  
   
 end

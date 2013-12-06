@@ -10,15 +10,15 @@
 				<% else %>
 					<li>Welcome <%= current_user.name %>!</li>
 				<% end %>
-				<li> <%= link_to 'Sign Out', logout_path %></li>
+				<li> <%= link_to 'Sign Out', logout_path,  method: "delete" %></li>
 			<% else %>
 				<% if (controller != 'sessions') && (request.path != login_path) %>
-					<li><%= link_to 'Login', new_session_path %></li> 
+					<li><%= link_to('Login', new_session_path) %></li> 
 					<li><%= link_to 'Register', new_user_path %> </li>
 				<% end %>
 			<% end %>
-			<li><a href="#">How it Works</a></li>
-			<li><a id="access_button" href="#">Share your Trip!</a></li>
+			<li><a href="/">How it Works</a></li>
+			<li><a id="access_button" href="/">Share your Trip!</a></li>
 		</ul>
 	</div>
 	
@@ -33,8 +33,8 @@
 			<% if signed_in? %>
 			<li><a class="navigation_item" href="/">Home</a></li>
 			<li><a class="navigation_item" href="/plans">Plans</a></li>
-			<li><a class="navigation_item" href="#">Network</a></li>
-			<li><a class="navigation_item" href="#">Ideas</a></li>
+			<li><a class="navigation_item" href="/">Network</a></li>
+			<li><a class="navigation_item" href="/">Ideas</a></li>
 			<li><a class="navigation_item" href="/profiles/<%= current_user.profile.id %>">Account</a></li>
 			<% end %>
 		</ul>	

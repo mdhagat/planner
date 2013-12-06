@@ -1,7 +1,10 @@
 
 	<br/>
 
-	<div class="plan_heading"> Your Plans: </div>
+	<div class="plan_heading"> 
+		<div class="plan_heading_title"> Your Plans: </div>	
+	</div>
+
 	<br/>
 
     <% current_user.plans.each do |plan| %>
@@ -14,9 +17,9 @@
 				<div class="plan_text"> <%= plan.get_description %> </div> 
 			</div> 
 			<div class="plan_pictures"> 
-				<% plan.get_segments.each_with_index do |segment,index| %>
+				<% plan.get_segments.select{|s| !s.is_air?}.each_with_index do |segment,index| %>
 					<%= image_tag(segment.get_thumbnail, :class => "plan_img") %>
-					<% break if index == 3 %>
+					<% break if index == 4 %>
 				<% end %>
  			</div> 
         	<%= link_to 'Show', plan, :class => "plan_show" %>

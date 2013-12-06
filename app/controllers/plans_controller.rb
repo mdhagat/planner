@@ -1,5 +1,7 @@
 class PlansController < ApplicationController
   before_action :set_plan, only: [:show, :edit, :update, :destroy]
+  before_action :store_location, only: [:show]
+  before_action :signed_in_user, only: [:customize]
 
   # GET /plans
   # GET /plans.json
@@ -60,7 +62,22 @@ class PlansController < ApplicationController
       format.json { head :no_content }
     end
   end
-
+  
+  # Save plan into my account
+  def customize
+      logger.info "--- in customize ----"
+      redirect_back_or plans_path, 'Now please save the plan into your account'
+  end
+  
+  
+  # Save plan into my account
+  def save_for_user
+      logger.info "--- in save_for_user ----"
+      Plan.save_plan(session[:recommended_plan_id], current_user.id)
+      session.delete(:recommended_plan_id)
+      redirect_to plans_path, :notice => "Plan saved in your account"
+  end
+  
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_plan

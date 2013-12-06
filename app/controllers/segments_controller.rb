@@ -105,12 +105,4 @@ class SegmentsController < ApplicationController
       params.require(:segment).permit(:name, :description, :thumbnail, :plan_id)
     end
     
-    # Save path to return to and redirect to login page
-    def signed_in_user
-      unless signed_in?
-        store_location
-        redirect_to new_session_path, notice: "But first, please sign in."
-      end
-    end
-    
 end

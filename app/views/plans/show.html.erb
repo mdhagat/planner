@@ -1,35 +1,40 @@
 
 	<br/>
 
-	<div class="plan_heading"> Your Plan: <%= @plan.get_description %> </div>
+	<div class="plan_heading"> 
+		<div class="plan_heading_title"> Your Plan: <%= @plan.get_description %> </div>
+		<% if signed_in? %>
+			<% if @plan.user_id.nil? %>
+				<%= link_to 'Save in my Account', save_plan_path, :method => "post", :class => "plan_heading_actions" %>
+			<% end %>
+		<% else%>
+				<%= link_to 'Customize', customize_path, :class => "plan_heading_actions" %>
+		<% end %>	
+	</div>
+	
 	<br/>
 
     <% @plan.segments.each do |segment| %>
-    
-    	<% if segment.is_air? %>
-    		<div class="segment_air" draggable = "true">
-				<%= image_tag(segment.get_thumbnail, :class => "segment_img_air") %>	
-				<div class="segment_desc_air"> 
-					<div class="segment_title"> <%= segment.get_name %> </div> 
-					<br/> <br/>
-					<div class="segment_text"> <%= segment.get_description %> </div> 
-				</div> 
-				<!-- Leave here for Day by Day functioning -->
-				<%= link_to '', daybyday_url(:id => segment.id), :class => "segment_show", :remote => :true %>
-				<%= link_to 'Swap', choose_url(:id => segment.id, :plan_id => @plan.id), :class => "segment_swap"%>		
-			</div>  
-    	<% else %>
-			<div class="segment" draggable = "true">
-				<%= image_tag(segment.get_thumbnail, :class => "segment_img") %>	
-				<div class="segment_desc"> 
-					<div class="segment_title"> <%= segment.get_name %> </div> 
-					<br/> <br/>
-					<div class="segment_text"> <%= segment.get_description %> </div> 
-				</div> 
-				<%= link_to 'Day by Day', daybyday_url(:id => segment.id), :class => "segment_show", :remote => :true %>
-				<%= link_to 'Swap', choose_url(:id => segment.id, :plan_id => @plan.id), :class => "segment_swap"%>			
-			</div>    
-		<% end %>
+    	<% if segment.is_air?
+    		style_suffix, daybyday_txt = "_air", '' 
+    	  else
+    		style_suffix, daybyday_txt = "",'Day by Day'
+    	  end
+    	%>
+
+		<div class=<%= "segment"+style_suffix %> draggable = "true">
+			<%= image_tag(segment.get_thumbnail, :class => "segment_img"+style_suffix) %>	
+			<div class=<%= "segment_desc"+style_suffix %>> 
+				<div class="segment_title"> <%= segment.get_name %> </div> 
+				<br/> <br/>
+				<div class="segment_text"> <%= segment.get_description %> </div> 
+			</div> 
+			<% if signed_in? %>
+				<%= link_to 'Swap', choose_url(:id => segment.id, :plan_id => @plan.id), :class => "segment_swap" %>		
+			<% end %>	
+			<%= link_to daybyday_txt, daybyday_url(:id => segment.id), :class => "segment_show", :remote => :true %>
+		</div>    
+
         <br/>
 
     <% end %>

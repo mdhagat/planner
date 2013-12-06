@@ -3,7 +3,10 @@ module PlansHelper
   # recommend a plan based on the user
   def recommend (user_id)
     # currently returns a hard-coded plan
-    return Plan.find(11)
+    recommended_plan_id = 11
+    
+    session[:recommended_plan_id] = recommended_plan_id
+    return Plan.find(recommended_plan_id)
   end
   
 end

@@ -15,7 +15,8 @@
 body
 {
 	text-align:center;
-	font-family:Verdana,sans-serif;
+//	font-family:Verdana,sans-serif;
+	font-family:Lucida Sans Unicode;
 }
 
 a:link {
@@ -104,7 +105,8 @@ div.access
 	border-width:0px;
 }
 
-#access_menu li {
+#access_menu li 
+{
 	display:inline;
 	padding:0px;
 	margin:5px;
@@ -166,24 +168,32 @@ div.navigation
 	border-width:0px;
 }
 
-#navigation_menu {
+#navigation_menu 
+{
 	font-size:medium;
 	text-align:left;
 	padding:0px;
 	margin:10px;
 }
 
-#navigation_menu li {
+#navigation_menu li 
+{
 	display:inline;
 	padding:0px;
 	margin:10px;
+}
+
+.navigation_item 
+{
+	font-size:15px;
+	font-weight:500;
+	color:blue;
 }
 
 div.footer
 {
 	font-size:small;
 }
-
 
 #footer_menu li {
 	display:inline;
