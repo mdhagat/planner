@@ -123,6 +123,7 @@ div.access
 	padding:7px;
 	background-color:#FFB894;
 	border-color:#FFB894;
+	box-shadow: 0px 0px 2px 1px #888888;
 }
 
 div.notification

@@ -61,6 +61,7 @@ div.wizard
   border-color:#C2D699;
   color:#4C3380;
   font-weight:bold;
+  box-shadow: 0px 0px 2px 1px #888888;
 }
 
 div.feature
@@ -70,9 +71,12 @@ div.feature
   right:55px;
   height:400px;
   width:455px;
-  background-color:#CDC9A5;
+//  background-color:#CDC9A5;
+//  background-color:#F0F0F0;
+  background-color:#F5F0E6;
   border-style:solid;
   border-width:0px;
+  box-shadow: 0px 0px 4px 1px #888888;
 }
 
 img.feature_img
@@ -82,6 +86,7 @@ img.feature_img
   left:10px;
   height:324px;
   width:432px;
+  box-shadow: 0px 0px 2px 1px #888888;
 }
 
 div.feature_desc
@@ -91,7 +96,9 @@ div.feature_desc
   left:10px;
   height:40px;
   width:425px;
-  background-color:white;
+//  background-color:white;
+//  background-color:#F0F0F0;
+//  background-color:#F5F0E6;
   text-align:left;
   font-size:small;
   padding:5px;
@@ -102,7 +109,10 @@ div.promo
 {
   height:200px;
   width:215px;
-  background-color:#CDC9A5;
+// background-color:#CDC9A5;
+//  background-color:#F0F0F0;
+  background-color:#F5F0E6;
+  box-shadow: 0px 0px 4px 1px #888888;
 }
 
 div.promo_desc
@@ -112,7 +122,9 @@ div.promo_desc
   left:10px;
   height:20px;
   width:186px;
-  background-color:white;
+//  background-color:white;
+//  background-color:#F0F0F0;
+//  background-color:#F5F0E6;
   text-align:center;
   font-size:small;
   font-weight:bold;

@@ -1,7 +1,7 @@
 class PlansController < ApplicationController
   before_action :set_plan, only: [:show, :edit, :update, :destroy]
-  before_action :store_location, only: [:show]
-  before_action :signed_in_user, only: [:customize]
+  before_action :store_location, only: [:show, :new]
+  before_action :signed_in_user, only: [:customize, :new]
 
   # GET /plans
   # GET /plans.json
