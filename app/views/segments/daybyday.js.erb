@@ -8,5 +8,5 @@ $('.segment_text:eq(<%= (@segment.order_in_plan - 1) %>)').replaceWith(
 	+ '</div>'
 )
 $('.segment_show:eq(<%= (@segment.order_in_plan - 1) %>)').replaceWith(
-	'<%= link_to "Summary", summary_url(:id => @segment.id), :class => "segment_show", :remote => :true %>'
+	'<%= link_to "Summary", summary_url(:segment_id => @segment.id), :class => "segment_show", :remote => :true %>'
 )

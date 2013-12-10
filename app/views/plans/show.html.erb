@@ -30,9 +30,9 @@
 				<div class="segment_text"> <%= segment.get_description %> </div> 
 			</div> 
 			<% if signed_in? %>
-				<%= link_to 'Swap', choose_url(:id => segment.id, :plan_id => @plan.id), :class => "segment_swap" %>		
+				<%= link_to 'Swap', choose_url(:segment_id => segment.id, :plan_id => @plan.id), :class => "segment_swap" %>		
 			<% end %>	
-			<%= link_to daybyday_txt, daybyday_url(:id => segment.id), :class => "segment_show", :remote => :true %>
+			<%= link_to daybyday_txt, daybyday_url(:segment_id => segment.id), :class => "segment_show", :remote => :true %>
 		</div>    
 
         <br/>

@@ -22,6 +22,15 @@ class PlansController < ApplicationController
   # GET /plans/1/edit
   def edit
   end
+  
+  # GET /add_segment
+  def add_segment
+    respond_to do |format|
+      format.html # index.html.erb
+      format.js {}
+      format.json { }
+    end
+  end
 
   # POST /plans
   # POST /plans.json

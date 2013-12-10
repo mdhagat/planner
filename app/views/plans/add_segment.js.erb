@@ -1,0 +1,12 @@
+$('.add_segment_link').replaceWith('\
+	<br/> \
+	<div class="add_segment_section"> \
+		<div class="title_section"> \
+			Name \
+		</div> \
+		<div class="description_section"> \
+			Description \
+		</div> \
+	</div> \
+	<%= link_to "Add Segment", add_segment_url, :class => "add_segment_link", :remote => true %> \
+')

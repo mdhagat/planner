@@ -1,37 +1,36 @@
+
+<br/>
+
+<div class="new_plan_section">
+
 <%= form_for(@plan) do |f| %>
   <% if @plan.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@plan.errors.count, "error") %> prohibited this plan from being saved:</h2>
-
-      <ul>
       <% @plan.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
+        <% flash.now[:alert] = msg %>
       <% end %>
-      </ul>
-    </div>
   <% end %>
+  
+  	<div class="title_section">
+  		<%= f.label :name, "Name", :class => 'title_tag' %>
+		<%= f.text_field :name, :class => 'title_field' %>
+  	</div>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
-  </div>
-  <div class="field">
-    <%= f.label :thumbnail %><br>
-    <%= f.text_area :thumbnail %>
-  </div>
-  <div class="field">
-    <%= f.label :orig_plan_id %><br>
-    <%= f.number_field :orig_plan_id %>
-  </div>
-  <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.number_field :user_id %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  	<div class="description_section">
+  		<%= f.label :description, "Description", :class => 'description_tag' %>
+		<%= f.text_area :description, :class => 'description_field' %>
+  	</div>
+
+	<div class="thumbnail_section">
+    	<%= f.label :thumbnail, :class => 'thumbnail_tag' %>
+    	<%= f.text_area :thumbnail, :class => 'thumbnail_field' %>
+  	</div>
+
+  	<%= link_to "Add Segment", add_segment_url, :class => "add_segment_link", :remote => true %>
+
+	<div class="actions">
+    	<%= f.submit %>
+  	</div>
+  	
 <% end %>
+
+</div>

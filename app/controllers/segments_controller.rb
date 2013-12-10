@@ -40,7 +40,7 @@ class SegmentsController < ApplicationController
   
   # GET /choose
   def choose
-  @segments = Segment.select{ |segment| segment.orig_segment_id.nil? }
+  @segments = Segment.select{ |segment| segment.orig_segment_id.nil? && !segment.is_air?}
     respond_to do |format|
       format.html # choose.html.erb
     end
@@ -48,9 +48,13 @@ class SegmentsController < ApplicationController
 
   # GET /swap
   def swap
-    Plan.swap(params[:plan_id], params[:orig_segment_id], params[:new_segment_id])
-    respond_to do |format|
-      format.html { redirect_to plan_url(params[:plan_id]) }
+    if params[:commit] == 'Skip'
+      redirect_to plan_url(params[:plan_id]) 
+    else
+      Plan.swap(params[:plan_id], params[:orig_segment_id], params[:new_segment_id])
+      respond_to do |format|
+        format.html { redirect_to plan_url(params[:plan_id]) }
+      end
     end
   end
 
@@ -97,7 +101,7 @@ class SegmentsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_segment
-      @segment = Segment.find(params[:id])
+      @segment = Segment.find(params[:segment_id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

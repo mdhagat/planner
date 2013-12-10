@@ -116,7 +116,7 @@ div.segment_text
   position:absolute;
   font-size: small;
   padding:10px;
-//  color:#4C3380;
+  line-height:15px;
 }
 
 a.segment_show
@@ -163,4 +163,5 @@ div.segment_choose_buttons
   margin:10px;
   background-color:#C2D699;
   border-width : 0px;
+  box-shadow: 0px 0px 2px 1px #888888;
 }
