@@ -9,9 +9,8 @@ $('.new_segment_placeholder').replaceWith('\
 			<%= label_tag :description, "Description", :class => "description_tag" %> \
 			<%= text_field_tag :description, "", :class => "description_field" %> \
 		</div> \
-		<div class="add_segment_thumbnail_section"> \
-			Thumbnail \
-		</div> \
+		<%= image_tag("travel4.gif", :class => "segment_thumbnail") %> \
+		<%= link_to "Change", "/", :class => "change_segment_thumbnail" %> \
 	</div> \
 	<div class="new_segment_placeholder"></div>\
 ')

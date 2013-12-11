@@ -12,20 +12,23 @@
       <% end %>
   <% end %>
   
-  	<div class="title_section">
-  		<%= f.label :name, "Plan Title", :class => 'title_tag' %>
-		<%= f.text_field :name, :class => 'title_field' %>
+	<div class="new_plan_header">
+  	
+  		<div class="title_section">
+  			<%= f.label :name, "Plan Title", :class => 'title_tag' %>
+			<%= f.text_field :name, :class => 'title_field' %>
+  		</div>
+
+  		<div class="description_section">
+  			<%= f.label :description, "Description", :class => 'description_tag' %>
+			<%= f.text_area :description, :class => 'description_field' %>
+  		</div>
+  		
+   		<%= image_tag("travel1.jpg", :class => 'plan_thumbnail') %>
+   		<%= link_to "Change", "/", :class => 'change_plan_thumbnail' %>
+
   	</div>
 
-  	<div class="description_section">
-  		<%= f.label :description, "Description", :class => 'description_tag' %>
-		<%= f.text_area :description, :class => 'description_field' %>
-  	</div>
-
-	<div class="thumbnail_section">
-    	<%= f.label :thumbnail, :class => 'thumbnail_tag' %>
-    	<%= f.text_area :thumbnail, :class => 'thumbnail_field' %>
-  	</div>
     
   	<%= link_to "Add Segment", add_segment_url, :class => "add_segment_link", :remote => true %>
   	

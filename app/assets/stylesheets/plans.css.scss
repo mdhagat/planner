@@ -149,12 +149,27 @@ div.new_plan_section
 //  border-width:1px;
 }
 
-.title_section
+
+div.new_plan_header
 {
   position:relative;
+  margin-left: auto;
+  margin-right: auto;
+  height:130px;
+  width:700px;
+  background-color:#F5F0E6;
+  box-shadow: 0px 0px 4px 1px #888888;
+//  border-style:solid;
+//  border-width:1px;
+}
+
+.title_section
+{
+  position:absolute;
+  top:10px;
   left:150px;
   height:30px;
-  width:350px;
+  width:500px;
 //  border-style:solid;
 //  border-width:1px;
 }
@@ -162,9 +177,9 @@ div.new_plan_section
 .title_tag
 {
   position:absolute;
-  left:10px;
+  left:0px;
   height:30px;
-  width:150px;
+  width:90px;
   text-align: right;
   color:#4C3380;
 //  border-style:solid;
@@ -174,16 +189,17 @@ div.new_plan_section
 .title_field
 {
   position:absolute;
-  left:170px;
-  width:400px;
+  left:100px;
+  width:390px;
 }
 
 .description_section
 {
-  position:relative;
+  position:absolute;
+  top:40px;
   left:150px;
   height:80px;
-  width:350px;
+  width:500px;
 //  border-style:solid;
 //  border-width:1px;
 }
@@ -191,9 +207,10 @@ div.new_plan_section
 .description_tag
 {
   position:absolute;
-  left:10px;
+  top:5px;
+  left:0px;
   height:30px;
-  width:150px;
+  width:90px;
   text-align: right;
   color:#4C3380;
 //  border-style:solid;
@@ -203,84 +220,93 @@ div.new_plan_section
 .description_field
 {
   position:absolute;
-  left:170px;
+  top:5px;
+  left:100px;
   height:65px;
-  width:400px;
+  width:390px;
   resize:none;
 }
 
-.thumbnail_section
+.plan_thumbnail
 {
-  position:relative;
-  left:150px;
-  height:30px;
-  width:350px;
+  position:absolute;
+  top:15px;
+  left:20px;
+  height:100px;
+  width:100px;
+//  box-shadow: 0px 0px 2px 1px #888888;
 //  border-style:solid;
 //  border-width:1px;
 }
 
-.thumbnail_tag
+.change_plan_thumbnail
 {
   position:absolute;
-  left:10px;
-  height:30px;
-  width:150px;
-  text-align: right;
-  color:#4C3380;
-//  border-style:solid;
-//  border-width:1px;
+  top:100px;
+  left:125px;
+  font-size:x-small;
 }
 
-.thumbnail_field
-{
-  position:absolute;
-  left:170px;
-  height:20px;
-  width:300px;
-  resize:none;
-}
 
 .add_segment_link
 {
   position:absolute;
-  left:170px;
+  left:415px;
   height:30px;
   width:150px;
-  margin:10px;
-  text-align: right;
+  padding:10px;
 }
 
 div.add_segment_section
 {
   position:relative;
-  height:140px;
-  width:650px;
+  height:130px;
+  width:610px;
   margin:auto;
   background-color:#F5F0E6;
   box-shadow: 0px 0px 4px 1px #888888;
 }
 
-
 .segment_title_section
 {
-  position:relative;
+  position:absolute;
   top:10px;
-  left:10px;
+  left:100px;
   height:30px;
-  width:350px;
+  width:500px;
 //  border-style:solid;
 //  border-width:1px;
 }
 
 .segment_description_section
 {
-  position:relative;
-  top:10px;
-  left:10px;
+  position:absolute;
+  top:40px;
+  left:100px;
   height:80px;
-  width:350px;
+  width:500px;
 //  border-style:solid;
 //  border-width:1px;
+}
+
+.segment_thumbnail
+{
+  position:absolute;
+  top:20px;
+  left:10px;
+  height:80px;
+  width:80px;
+//  box-shadow: 0px 0px 2px 1px #888888;
+//  border-style:solid;
+//  border-width:1px;
+}
+
+.change_segment_thumbnail
+{
+  position:absolute;
+  top:100px;
+  left:35px;
+  font-size:x-small;
 }
 
 .add_segment_button
