@@ -1,12 +1,17 @@
-$('.add_segment_link').replaceWith('\
+$('.new_segment_placeholder').replaceWith('\
 	<br/> \
 	<div class="add_segment_section"> \
-		<div class="title_section"> \
-			Name \
+		<div class="segment_title_section"> \
+			<%= label_tag :name, "Segment Title", :class => "title_tag" %> \
+			<%= text_field_tag :name, "", :class => "title_field" %> \
 		</div> \
-		<div class="description_section"> \
-			Description \
+		<div class="segment_description_section"> \
+			<%= label_tag :description, "Description", :class => "description_tag" %> \
+			<%= text_field_tag :description, "", :class => "description_field" %> \
+		</div> \
+		<div class="add_segment_thumbnail_section"> \
+			Thumbnail \
 		</div> \
 	</div> \
-	<%= link_to "Add Segment", add_segment_url, :class => "add_segment_link", :remote => true %> \
+	<div class="new_segment_placeholder"></div>\
 ')

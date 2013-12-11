@@ -3,6 +3,8 @@
 
 <div class="new_plan_section">
 
+<br/>
+
 <%= form_for(@plan) do |f| %>
   <% if @plan.errors.any? %>
       <% @plan.errors.full_messages.each do |msg| %>
@@ -11,7 +13,7 @@
   <% end %>
   
   	<div class="title_section">
-  		<%= f.label :name, "Name", :class => 'title_tag' %>
+  		<%= f.label :name, "Plan Title", :class => 'title_tag' %>
 		<%= f.text_field :name, :class => 'title_field' %>
   	</div>
 
@@ -24,13 +26,22 @@
     	<%= f.label :thumbnail, :class => 'thumbnail_tag' %>
     	<%= f.text_area :thumbnail, :class => 'thumbnail_field' %>
   	</div>
-
+    
   	<%= link_to "Add Segment", add_segment_url, :class => "add_segment_link", :remote => true %>
+  	
+    <br/>
+    
+	<div class="new_segment_placeholder"></div>
+
+	<br/>
 
 	<div class="actions">
-    	<%= f.submit %>
+    	<%= f.submit 'Save', :class => "add_segment_button" %>
+    	<%= f.submit 'Skip', :class => "add_segment_button" %>
   	</div>
   	
 <% end %>
+
+<br/>
 
 </div>

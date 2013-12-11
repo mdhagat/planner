@@ -144,6 +144,7 @@ div.new_plan_section
   margin-left: auto;
   margin-right: auto;
   width:1000px;
+  font-size:small;
 //  border-style:solid;
 //  border-width:1px;
 }
@@ -151,7 +152,7 @@ div.new_plan_section
 .title_section
 {
   position:relative;
-  left:100px;
+  left:150px;
   height:30px;
   width:350px;
 //  border-style:solid;
@@ -165,7 +166,6 @@ div.new_plan_section
   height:30px;
   width:150px;
   text-align: right;
-  font-size:medium;
   color:#4C3380;
 //  border-style:solid;
 //  border-width:1px;
@@ -181,7 +181,7 @@ div.new_plan_section
 .description_section
 {
   position:relative;
-  left:100px;
+  left:150px;
   height:80px;
   width:350px;
 //  border-style:solid;
@@ -195,7 +195,6 @@ div.new_plan_section
   height:30px;
   width:150px;
   text-align: right;
-  font-size:medium;
   color:#4C3380;
 //  border-style:solid;
 //  border-width:1px;
@@ -213,7 +212,7 @@ div.new_plan_section
 .thumbnail_section
 {
   position:relative;
-  left:100px;
+  left:150px;
   height:30px;
   width:350px;
 //  border-style:solid;
@@ -227,7 +226,6 @@ div.new_plan_section
   height:30px;
   width:150px;
   text-align: right;
-  font-size:medium;
   color:#4C3380;
 //  border-style:solid;
 //  border-width:1px;
@@ -242,13 +240,58 @@ div.new_plan_section
   resize:none;
 }
 
+.add_segment_link
+{
+  position:absolute;
+  left:170px;
+  height:30px;
+  width:150px;
+  margin:10px;
+  text-align: right;
+}
+
 div.add_segment_section
 {
   position:relative;
   height:140px;
-  width:750px;
+  width:650px;
   margin:auto;
   background-color:#F5F0E6;
   box-shadow: 0px 0px 4px 1px #888888;
 }
 
+
+.segment_title_section
+{
+  position:relative;
+  top:10px;
+  left:10px;
+  height:30px;
+  width:350px;
+//  border-style:solid;
+//  border-width:1px;
+}
+
+.segment_description_section
+{
+  position:relative;
+  top:10px;
+  left:10px;
+  height:80px;
+  width:350px;
+//  border-style:solid;
+//  border-width:1px;
+}
+
+.add_segment_button
+{
+  position:relative;
+  height:30px;
+  width:50px;
+  color:#4C3380;
+  font-weight:bold; 
+  margin:10px;
+  background-color:#C2D699;
+  border-width : 0px;
+  box-shadow: 0px 0px 2px 1px #888888;
+}
