@@ -3,14 +3,17 @@ $('.new_segment_placeholder').replaceWith('\
 	<div class="add_segment_section"> \
 		<div class="segment_title_section"> \
 			<%= label_tag :name, "Segment Title", :class => "title_tag" %> \
-			<%= text_field_tag :name, "", :class => "title_field" %> \
+			<%= text_field_tag "segments["+params[:count]+"][title]", "", :class => "title_field" %> \
 		</div> \
 		<div class="segment_description_section"> \
 			<%= label_tag :description, "Description", :class => "description_tag" %> \
-			<%= text_field_tag :description, "", :class => "description_field" %> \
+			<textarea name=<%="segments["+params[:count]+"][description]"%> class="description_field"></textarea> \
 		</div> \
 		<%= image_tag("travel4.gif", :class => "segment_thumbnail") %> \
 		<%= link_to "Change", "/", :class => "change_segment_thumbnail" %> \
 	</div> \
 	<div class="new_segment_placeholder"></div>\
+')
+$('.add_segment_link').replaceWith('\
+  	<%= link_to "Add Segment", add_segment_url(:count=>params[:count].to_i+1), :class => "add_segment_link", :remote => true %> \
 ')

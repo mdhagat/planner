@@ -36,6 +36,12 @@ class PlansController < ApplicationController
   # POST /plans.json
   def create
     @plan = Plan.new(plan_params)
+    @plan.user_id = current_user.id
+
+    logger.info "------------in CREATE ------------"
+    params['segments'].each do |k, v|
+      logger.info v
+    end
 
     respond_to do |format|
       if @plan.save

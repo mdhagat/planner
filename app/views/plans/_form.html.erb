@@ -12,6 +12,7 @@
       <% end %>
   <% end %>
   
+  	<% seg_count = 0 %>
 	<div class="new_plan_header">
   	
   		<div class="title_section">
@@ -30,7 +31,7 @@
   	</div>
 
     
-  	<%= link_to "Add Segment", add_segment_url, :class => "add_segment_link", :remote => true %>
+  	<%= link_to "Add Segment", add_segment_url(:count=>1), :class => "add_segment_link", :remote => true %>
   	
     <br/>
     

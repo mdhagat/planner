@@ -191,6 +191,7 @@ div.new_plan_header
   position:absolute;
   left:100px;
   width:390px;
+  font-family:Lucida Sans Unicode;
 }
 
 .description_section
@@ -200,6 +201,7 @@ div.new_plan_header
   left:150px;
   height:80px;
   width:500px;
+  vertical-align:top;
 //  border-style:solid;
 //  border-width:1px;
 }
@@ -219,12 +221,14 @@ div.new_plan_header
 
 .description_field
 {
+  vertical-align:top;
   position:absolute;
   top:5px;
   left:100px;
   height:65px;
   width:390px;
   resize:none;
+  font-family:Lucida Sans Unicode;
 }
 
 .plan_thumbnail
@@ -260,12 +264,15 @@ div.new_plan_header
 div.add_segment_section
 {
   position:relative;
+  margin-left: auto;
+  margin-right: auto;
   height:130px;
   width:610px;
-  margin:auto;
+//  margin:auto;
   background-color:#F5F0E6;
   box-shadow: 0px 0px 4px 1px #888888;
 }
+
 
 .segment_title_section
 {
