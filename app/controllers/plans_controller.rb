@@ -36,15 +36,12 @@ class PlansController < ApplicationController
   # POST /plans.json
   def create
     @plan = Plan.new(plan_params)
+    # make the plan belong to the current user
     @plan.user_id = current_user.id
-
-    logger.info "------------in CREATE ------------"
-    params['segments'].each do |k, v|
-      logger.info v
-    end
 
     respond_to do |format|
       if @plan.save
+        @plan.add_segments(params['segments'])
         format.html { redirect_to @plan, notice: 'Plan was successfully created.' }
         format.json { render action: 'show', status: :created, location: @plan }
       else

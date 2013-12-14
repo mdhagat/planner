@@ -2,7 +2,8 @@
 	<br/>
 
 	<div class="plan_heading"> 
-		<div class="plan_heading_title"> Your Plan: <%= @plan.get_description %> </div>
+		<div class="plan_heading_title"> Your Plan: <%= @plan.get_name %> </div>
+		<div class="plan_heading_description"> <%= @plan.get_description %> </div>
 		<% if signed_in? %>
 			<% if @plan.user_id.nil? %>
 				<%= link_to 'Save in my Account', save_plan_path, :method => "post", :class => "plan_heading_actions" %>

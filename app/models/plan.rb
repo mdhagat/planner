@@ -30,6 +30,25 @@ class Plan < ActiveRecord::Base
     end
   end
   
+  def add_segments(segments)
+    logger.info "------------- in add_segments ------------------"
+    seg_order = 1
+    if segments
+      segments.each do |k, v|
+        new_segment = Segment.new
+        new_segment.order_in_plan = seg_order
+        seg_order += 1
+        logger.info "adding name: " + v["title"]
+        new_segment.name = v["title"]
+        logger.info "adding description: " + v["description"]
+        new_segment.description = v["description"]
+        new_segment.thumbnail = "travel4.gif"
+        new_segment.save
+        self.segments << new_segment
+      end
+    end
+  end
+  
   def get_name
     if self.name.nil?
       return @orig_plan.name
