@@ -9,7 +9,7 @@ $('.new_segment_placeholder').replaceWith('\
 			<%= label_tag :description, "Description", :class => "description_tag" %> \
 			<textarea name=<%="segments["+params[:count]+"][description]"%> class="description_field"></textarea> \
 		</div> \
-		<%= image_tag("travel4.gif", :class => "segment_thumbnail") %> \
+		<%= image_tag(Plan::DEFAULT_SEGMENT_IMAGE, :class => "segment_thumbnail") %> \
 		<%= link_to "Change", "/", :class => "change_segment_thumbnail" %> \
 	</div> \
 	<div class="new_segment_placeholder"></div>\

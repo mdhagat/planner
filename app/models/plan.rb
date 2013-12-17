@@ -3,6 +3,9 @@ class Plan < ActiveRecord::Base
   belongs_to :user
   has_many :segments, -> { order('order_in_plan') }
   
+  DEFAULT_PLAN_IMAGE = "travel3.gif"
+  DEFAULT_SEGMENT_IMAGE = "travel4.gif"
+  
   def self.swap(plan_id, segment_id, new_segment_id)  
     new_segment = Segment.new
     old_segment = Segment.find(segment_id)

@@ -25,7 +25,7 @@
 			<%= f.text_area :description, :class => 'description_field' %>
   		</div>
   		
-   		<%= image_tag("travel1.jpg", :class => 'plan_thumbnail') %>
+   		<%= image_tag(Plan::DEFAULT_PLAN_IMAGE, :class => 'plan_thumbnail') %>
    		<%= link_to "Change", "/", :class => 'change_plan_thumbnail' %>
 
   	</div>
