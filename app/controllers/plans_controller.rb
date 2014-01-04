@@ -35,20 +35,24 @@ class PlansController < ApplicationController
   # POST /plans
   # POST /plans.json
   def create
-    @plan = Plan.new(plan_params)
-    # make the plan belong to the current user
-    @plan.user_id = current_user.id
-
-    respond_to do |format|
-      if @plan.save
-        @plan.add_segments(params['segments'])
-        format.html { redirect_to @plan, notice: 'Plan was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @plan }
-      else
-        format.html { render action: 'new' }
-        format.json { render json: @plan.errors, status: :unprocessable_entity }
+    if params[:commit] == 'Skip'
+      redirect_to root_url 
+    else  
+      @plan = Plan.new(plan_params)
+      # make the plan belong to the current user
+      @plan.user_id = current_user.id
+  
+      respond_to do |format|
+        if @plan.save
+          @plan.add_segments(params['segments'])
+          format.html { redirect_to @plan, notice: 'Plan was successfully created.' }
+          format.json { render action: 'show', status: :created, location: @plan }
+        else
+          format.html { render action: 'new' }
+          format.json { render json: @plan.errors, status: :unprocessable_entity }
+        end
       end
-    end
+     end  
   end
 
   # PATCH/PUT /plans/1

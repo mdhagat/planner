@@ -11,8 +11,9 @@ $('.new_segment_placeholder').replaceWith('\
 		<%= image_tag(Plan::DEFAULT_SEGMENT_IMAGE, :class => "segment_thumbnail") %> \
 		<%= link_to "Change", "/", :class => "change_segment_thumbnail" %> \
   		<%= link_to "X", delete_segment_url(:id=>params[:count]), :class => "delete_segment", :remote => true %> \
+  		<%= link_to "Add Day", "/", :class => "add_day" %> \
 	</div> \
-	<div class="new_segment_placeholder"></div>\
+	<div class="new_segment_placeholder"></div> \
 ')
 $('.add_segment_link').replaceWith('\
   	<%= link_to "Add Segment", add_segment_url(:count=>params[:count].to_i+1), :class => "add_segment_link", :remote => true %> \
