@@ -172,8 +172,8 @@ div.new_plan_header
   margin-bottom:10px;
   height:130px;
   width:700px;
-  background-color:#F5F0E6;
-  box-shadow: 0px 0px 4px 1px #888888;
+//  background-color:#F5F0E6;
+//  box-shadow: 0px 0px 4px 1px #888888;
 //  border-style:solid;
 //  border-width:1px;
 }
@@ -261,8 +261,8 @@ div.new_plan_header
 .change_plan_thumbnail
 {
   position:absolute;
-  top:100px;
-  left:125px;
+  top:115px;
+  left:50px;
   font-size:x-small;
 }
 
@@ -286,7 +286,6 @@ div.add_segment_section
   background-color:#F5F0E6;
   box-shadow: 0px 0px 4px 1px #888888;
 }
-
 
 .segment_title_section
 {
@@ -338,12 +337,31 @@ div.add_segment_section
   font-size:small;
 }
 
-.add_day
+.add_day_section
 {
   position:absolute;
-  bottom:10px;
-  left:290px;
+  top:125px;
+  left:10px;
+  width:600px;
   margin:auto;
+//  border-style:solid;
+//  border-width:1px;
+}
+
+.day_section
+{
+  position:relative;
+  height:25px;
+  width:600px;
+  margin:auto;
+//  border-style:solid;
+//  border-width:1px;
+}
+
+.day_description
+{
+  position:relative;
+  width:400px;
 }
 
 .save_plan_button
