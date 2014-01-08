@@ -1,7 +1,7 @@
 class Segment < ActiveRecord::Base
   after_find :set_orig_segment
   belongs_to :plan
-  has_many :days
+  has_many :days, -> { order('order_in_segment') }
 
   def get_name
     if self.orig_segment_id

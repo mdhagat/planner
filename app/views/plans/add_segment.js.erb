@@ -11,12 +11,13 @@ $('.new_segment_placeholder').replaceWith('\
 		<%= image_tag(Plan::DEFAULT_SEGMENT_IMAGE, :class => "segment_thumbnail") %> \
 		<%= link_to "Change", "/", :class => "change_segment_thumbnail" %> \
   		<%= link_to "X", delete_segment_url(:segment_id=>params[:segment_id]), :class => "delete_segment", :remote => true %> \
-  		<div class="add_day_section"> \
-  			<%= link_to "Add Day", add_day_url(:day_id=>1, :segment_id=>params[:segment_id]), :segment_id=>params[:segment_id], :class => "add_day", :remote => :true %> \
+  		<%= link_to "Add Day", add_day_url(:day_id=>1, :segment_id=>params[:segment_id]), :segment_id=>params[:segment_id], :class => "add_day", :remote => :true %> \
+ 		<div class="add_day_section"> \
+  			<div class="new_day_placeholder" segment_id="<%=params[:segment_id]%>"></div> \
   		</div> \
 	</div> \
 	<div class="new_segment_placeholder"></div> \
 ')
-$('.add_segment_link').replaceWith('\
-  	<%= link_to "Add Segment", add_segment_url(:segment_id=>params[:segment_id].to_i+1), :class => "add_segment_link", :remote => true %> \
+$('.add_segment').replaceWith('\
+  	<%= link_to "Add Segment", add_segment_url(:segment_id=>params[:segment_id].to_i+1), :class => "add_segment", :remote => true %> \
 ')

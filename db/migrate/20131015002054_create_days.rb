@@ -5,6 +5,7 @@ class CreateDays < ActiveRecord::Migration
       t.string :name
       t.text :description
       t.integer :segment_id
+      t.integer :order_in_segment
 
       t.timestamps
     end

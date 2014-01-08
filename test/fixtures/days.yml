@@ -6,6 +6,7 @@ day1:
   name: Arrive in London, Check-in at Hotel Hyde Park, Tower of London
   description: Coming Soon
   segment_id: 1
+  order_in_segment: 1
 
 day2:
   id: 2
@@ -13,6 +14,7 @@ day2:
   name: London Eye, Imperial War Museum
   description: Coming Soon
   segment_id: 1
+  order_in_segment: 2
 
 day3:
   id: 3
@@ -20,6 +22,7 @@ day3:
   name: Train to Bath (First Great Western), Check-in at Abbey Green Flat
   description: Coming Soon
   segment_id: 1
+  order_in_segment: 3
 
 day4:
   id: 4
@@ -27,6 +30,7 @@ day4:
   name: Stonehenge and Lacock Village Tour (Mad Max Tours)
   description: Coming Soon
   segment_id: 1
+  order_in_segment: 4
 
 day5:
   id: 5
@@ -34,6 +38,7 @@ day5:
   name: Roman Baths, Fashion Museum
   description: Coming Soon
   segment_id: 1
+  order_in_segment: 5
 
 day6:
   id: 6
@@ -41,6 +46,7 @@ day6:
   name: Bus to London (National Express),  Flight to Barcelona (British Airways), Check-in at Hotel Montblanc, Las Ramblas
   description: Coming Soon
   segment_id: 2
+  order_in_segment: 1
 
 day7:
   id: 7
@@ -48,6 +54,7 @@ day7:
   name: Sagrada Familia, Casa Batlo
   description: Coming Soon
   segment_id: 2
+  order_in_segment: 2
 
 day8:
   id: 8
@@ -55,6 +62,7 @@ day8:
   name: Walk to Beach, Olympic Harbor
   description: Coming Soon
   segment_id: 2
+  order_in_segment: 3
 
 day9:
   id: 9
@@ -62,6 +70,7 @@ day9:
   name: Flight to Milan (EasyJet), Bus to Varrena, Check-in at Hotel Villa Cipressi
   description: Coming Soon
   segment_id: 3
+  order_in_segment: 1
 
 day10:
   id: 10
@@ -69,6 +78,7 @@ day10:
   name: Around Varrena
   description: Coming Soon
   segment_id: 3
+  order_in_segment: 2
 
 day11:
   id: 11
@@ -76,6 +86,7 @@ day11:
   name: Day trip to Bellagio
   description: Coming Soon
   segment_id: 3
+  order_in_segment: 3
 
 day12:
   id: 12
@@ -83,6 +94,7 @@ day12:
   name: Day trip to Como
   description: Coming Soon
   segment_id: 3
+  order_in_segment: 4
 
 day13:
   id: 13
@@ -90,4 +102,5 @@ day13:
   name: Bus to Milan, Fight to London (EasyJet), Check-in at Springfield Hotel
   description: Coming Soon
   segment_id: 3
+  order_in_segment: 5
   
