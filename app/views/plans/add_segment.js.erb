@@ -1,3 +1,6 @@
+$('.add_segment').replaceWith('\
+  	<%= link_to "Add Segment", add_segment_url(:segment_id=>params[:segment_id].to_i+1), :class => "add_segment", :remote => true %> \
+')
 $('.new_segment_placeholder').replaceWith('\
 	<div class="add_segment_section" segment_id=<%=params[:segment_id]%>> \
 		<div class="segment_title_section"> \
@@ -17,7 +20,4 @@ $('.new_segment_placeholder').replaceWith('\
   		</div> \
 	</div> \
 	<div class="new_segment_placeholder"></div> \
-')
-$('.add_segment').replaceWith('\
-  	<%= link_to "Add Segment", add_segment_url(:segment_id=>params[:segment_id].to_i+1), :class => "add_segment", :remote => true %> \
 ')
