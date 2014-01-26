@@ -1,5 +1,6 @@
+<%# Replace Add Day link with a placeholder so can't cause duplicate day ids by fast clicking %>
 $('.add_day[segment_id=<%= params[:segment_id]%>]').replaceWith('\
-  	<%= link_to "Add Day", add_day_url(:day_id=>params[:day_id].to_i+1, :segment_id=>params[:segment_id]), :segment_id=>params[:segment_id], :class => "add_day", :remote => :true %> \
+  	<%= link_to "", "#", :segment_id=>params[:segment_id], :class => "add_day" %> \
 ')
 h = $('.add_segment_section[segment_id=<%= params[:segment_id]%>]').height();
 $('.add_segment_section[segment_id=<%= params[:segment_id]%>]').height(h+25);
@@ -10,4 +11,8 @@ $('.new_day_placeholder[segment_id=<%= params[:segment_id]%>]').replaceWith('\
 			<%= link_to "X", delete_day_url(:day_id=>params[:day_id], :segment_id=>params[:segment_id]), :class => "delete_day", :remote => true %> \
 		</div> \
 		<div class="new_day_placeholder" segment_id="<%=params[:segment_id]%>"></div> \
+')
+<%# Now update Add Day link %>
+$('.add_day[segment_id=<%= params[:segment_id]%>]').replaceWith('\
+  	<%= link_to "Add Day", add_day_url(:day_id=>params[:day_id].to_i+1, :segment_id=>params[:segment_id]), :segment_id=>params[:segment_id], :class => "add_day", :remote => :true %> \
 ')
