@@ -34,6 +34,20 @@ a:active {
 	color: green;
 }
 
+input
+{
+  border-style:solid;
+  border-width:1px;
+  border-color:green;
+}
+
+textarea
+{
+  border-style:solid;
+  border-width:1px;
+  border-color:green;
+}
+
 div.bigbox_header
 {
 	position:relative;
@@ -187,7 +201,6 @@ div.navigation
 {
 	font-size:15px;
 	font-weight:500;
-	color:blue;
 }
 
 div.footer
