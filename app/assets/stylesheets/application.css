@@ -39,6 +39,7 @@ input
   border-style:solid;
   border-width:1px;
   border-color:green;
+  padding:2px;
 }
 
 textarea
@@ -46,6 +47,7 @@ textarea
   border-style:solid;
   border-width:1px;
   border-color:green;
+  padding:2px;
 }
 
 div.bigbox_header

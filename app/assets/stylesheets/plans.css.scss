@@ -266,11 +266,11 @@ div.new_plan_header
   font-size:x-small;
 }
 
-
 .add_segment
 {
   position:relative;
-  margin-top:10px;
+//  border-style:solid;
+//  border-width:1px;
 }
 
 div.add_segment_section
@@ -278,7 +278,7 @@ div.add_segment_section
   position:relative;
   margin-left: auto;
   margin-right: auto;
-  margin-top:15px;
+  margin-bottom:15px;
   height:155px;
   width:630px;
   background-color:#F5F0E6;
@@ -337,14 +337,17 @@ div.add_segment_section
 
 .add_day
 {
-  position:relative;
-  top:120px;
+  position:absolute;
+  bottom:10px;
+  left:280px;
+//  border-style:solid;
+//  border-width:1px;
 }
 
 .add_day_section
 {
   position:absolute;
-  top:140px;
+  top:125px;
   left:10px;
   width:600px;
   margin:auto;
@@ -365,7 +368,7 @@ div.add_segment_section
 .day_description
 {
   position:relative;
-  width:400px;
+  width:450px;
 }
 
 .save_plan_button
