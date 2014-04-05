@@ -240,7 +240,7 @@ div.new_plan_header
   position:absolute;
   top:5px;
   left:100px;
-  height:65px;
+  height:55px;
   width:390px;
   resize:none;
   font-family:Lucida Sans Unicode;
@@ -358,17 +358,44 @@ div.add_segment_section
 .day_section
 {
   position:relative;
-  height:25px;
-  width:600px;
+  height:75px;
+  width:605px;
   margin:auto;
 //  border-style:solid;
 //  border-width:1px;
 }
 
-.day_description
+.day_description_tag
 {
-  position:relative;
+  position:absolute;
+  top:5px;
+  left:5px;
+  height:30px;
+  width:100px;
+  text-align: right;
+  color:#4C3380;
+//  border-style:solid;
+//  border-width:1px;
+}
+
+.day_description_field
+{
+  vertical-align:top;
+  position:absolute;
+  top:5px;
+  left:115px;
+  height:60px;
   width:450px;
+  resize:none;
+  font-family:Lucida Sans Unicode;
+ }
+
+.delete_day
+{
+  position:absolute;
+  top:10px;
+  right:15px;
+  font-size:small;
 }
 
 .save_plan_button

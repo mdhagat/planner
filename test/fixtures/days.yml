@@ -5,7 +5,7 @@ day1:
   day: 2011-6-1
   name: Arrive in London, Check-in at Hotel Hyde Park, Tower of London
   description: Coming Soon
-  segment_id: 1
+  segment_id: 0
   order_in_segment: 1
 
 day2:
@@ -13,7 +13,7 @@ day2:
   day: 2011-6-1
   name: London Eye, Imperial War Museum
   description: Coming Soon
-  segment_id: 1
+  segment_id: 0
   order_in_segment: 2
 
 day3:
@@ -22,7 +22,7 @@ day3:
   name: Train to Bath (First Great Western), Check-in at Abbey Green Flat
   description: Coming Soon
   segment_id: 1
-  order_in_segment: 3
+  order_in_segment: 1
 
 day4:
   id: 4
@@ -30,7 +30,7 @@ day4:
   name: Stonehenge and Lacock Village Tour (Mad Max Tours)
   description: Coming Soon
   segment_id: 1
-  order_in_segment: 4
+  order_in_segment: 2
 
 day5:
   id: 5
@@ -38,7 +38,7 @@ day5:
   name: Roman Baths, Fashion Museum
   description: Coming Soon
   segment_id: 1
-  order_in_segment: 5
+  order_in_segment: 3
 
 day6:
   id: 6

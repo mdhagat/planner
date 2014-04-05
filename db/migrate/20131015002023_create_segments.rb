@@ -5,6 +5,7 @@ class CreateSegments < ActiveRecord::Migration
       t.text :description
       t.text :thumbnail
       t.string :segment_type
+      t.string :city
       t.string :country
       t.integer :orig_segment_id
       t.integer :plan_id

@@ -105,6 +105,7 @@ ActiveRecord::Schema.define(version: 20131015003101) do
     t.text     "description"
     t.text     "thumbnail"
     t.string   "segment_type"
+    t.string   "city"
     t.string   "country"
     t.integer  "orig_segment_id"
     t.integer  "plan_id"
