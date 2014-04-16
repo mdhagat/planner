@@ -163,7 +163,6 @@ div.new_plan_section
 //  border-width:1px;
 }
 
-
 div.new_plan_header
 {
   position:relative;
@@ -214,7 +213,7 @@ div.new_plan_header
   position:absolute;
   top:40px;
   left:150px;
-  height:80px;
+  height:50px;
   width:500px;
   vertical-align:top;
 //  border-style:solid;
@@ -240,10 +239,47 @@ div.new_plan_header
   position:absolute;
   top:5px;
   left:100px;
-  height:55px;
+  height:35px;
   width:390px;
   resize:none;
   font-family:Lucida Sans Unicode;
+}
+
+.type_section
+{
+  position:absolute;
+  top:90px;
+  left:150px;
+  height:30px;
+  width:500px;
+  vertical-align:top;
+//  border-style:solid;
+//  border-width:1px;
+}
+
+.type_tag
+{
+  position:absolute;
+  top:5px;
+  left:0px;
+  height:30px;
+  width:90px;
+  text-align: right;
+  color:#4C3380;
+//  border-style:solid;
+//  border-width:1px;
+}
+
+.type_field
+{
+  vertical-align:top;
+  position:absolute;
+  top:5px;  
+  left:100px;
+  width:200px;
+  resize:none;
+  font-family:Lucida Sans Unicode;
+  border-color:green;
 }
 
 .plan_thumbnail
@@ -266,20 +302,54 @@ div.new_plan_header
   font-size:x-small;
 }
 
-.add_segment
+.add_segment_links
 {
   position:relative;
+  margin-left: auto;
+  margin-right: auto;
+  height:30px;
+  width:630px;
 //  border-style:solid;
 //  border-width:1px;
 }
 
-div.add_segment_section
+.add_stay
+{
+  position:absolute;
+  top:5px;
+  left:225px;
+//  border-style:solid;
+//  border-width:1px;
+}
+
+.add_transport
+{
+  position:absolute;
+  top:5px;
+  left:325px;
+//  border-style:solid;
+//  border-width:1px;
+}
+
+div.add_stay_section
 {
   position:relative;
   margin-left: auto;
   margin-right: auto;
   margin-bottom:15px;
   height:155px;
+  width:630px;
+  background-color:#F5F0E6;
+  box-shadow: 0px 0px 4px 1px #888888;
+}
+
+div.add_transport_section
+{
+  position:relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom:15px;
+  height:130px;
   width:630px;
   background-color:#F5F0E6;
   box-shadow: 0px 0px 4px 1px #888888;
@@ -301,10 +371,70 @@ div.add_segment_section
   position:absolute;
   top:40px;
   left:100px;
-  height:80px;
+  height:50px;
   width:500px;
 //  border-style:solid;
 //  border-width:1px;
+}
+
+.segment_location_section
+{
+  position:absolute;
+  top:90px;
+  left:100px;
+  height:30px;
+  width:500px;
+//  border-style:solid;
+//  border-width:1px;
+}
+
+.city_tag
+{
+  position:absolute;
+  top:7px;
+  left:0px;
+  height:30px;
+  width:90px;
+  text-align: right;
+  color:#4C3380;
+//  border-style:solid;
+//  border-width:1px;
+}
+
+.city_field
+{
+  vertical-align:top;
+  position:absolute;
+  top:5px;
+  left:100px;
+  width:150px;
+  resize:none;
+  font-family:Lucida Sans Unicode;
+}
+
+.country_tag
+{
+  position:absolute;
+  top:7px;
+  left:230px;
+  height:30px;
+  width:90px;
+  text-align: right;
+  color:#4C3380;
+//  border-style:solid;
+//  border-width:1px;
+}
+
+.country_field
+{
+  vertical-align:top;
+  position:absolute;
+  top:5px;
+  left:330px;
+  width:160px;
+  resize:none;
+  font-family:Lucida Sans Unicode;
+  border-color:green;
 }
 
 .segment_thumbnail

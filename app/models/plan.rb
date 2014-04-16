@@ -6,6 +6,8 @@ class Plan < ActiveRecord::Base
   # Default thumbnail images for plan and segments
   DEFAULT_PLAN_IMAGE = "travel3.gif"
   DEFAULT_SEGMENT_IMAGE = "travel4.gif"
+  DEFAULT_STAY_IMAGE = "travel4.gif"
+  DEFAULT_TRANSPORT_IMAGE = "travel7.gif"
   
   #
   # Swap a segment in a plan with a different one

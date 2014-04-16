@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(version: 20131015003101) do
   create_table "plans", force: true do |t|
     t.string   "name"
     t.text     "description"
+    t.string   "plan_type"
     t.text     "thumbnail"
     t.integer  "orig_plan_id"
     t.integer  "user_id"

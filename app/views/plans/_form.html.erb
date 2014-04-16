@@ -23,15 +23,23 @@
 			<%= f.text_area :description, :class => 'description_field' %>
   		</div>
   		
-   		<%= image_tag(Plan::DEFAULT_PLAN_IMAGE, :class => 'plan_thumbnail') %>
+  		<div class="type_section">
+  			<%= f.label :plan_type, "Plan Type", :class => 'type_tag' %>
+  			<%= f.select :plan_type, options_for_select([ "Family with Kids", "Couple Only", "History and Museum Buffs", "Adventure Backpackers" ], "Family with Kids"), {}, :class => 'type_field' %> 
+  		</div>
+
+		<%= image_tag Plan::DEFAULT_PLAN_IMAGE, :class => 'plan_thumbnail' %>
    		<%= link_to "Change", "/", :class => 'change_plan_thumbnail' %>
 
   	</div>
     
 	<div class="new_segment_placeholder"></div>
 	
-  	<%= link_to "Add Segment", add_segment_url(:segment_id=>1), :class => "add_segment", :remote => true %>
-  	
+	<div class="add_segment_links">
+	  	<%= link_to "Add Stay", add_stay_url(:segment_id=>1), :class => "add_stay", :remote => true %>
+  		<%= link_to "Add Transportation", add_transport_url(:segment_id=>1), :class => "add_transport", :remote => true %>
+  	</div>
+  	  	
 	<div class="actions">
     	<%= f.submit 'Save', :class => "save_plan_button" %>
     	<%= f.submit 'Skip', :class => "save_plan_button" %>

@@ -5,12 +5,14 @@ plan_001:
   id: 1
   name: Introduction to Europe
   description: London, Bath, Amsterdam and Lake Como
+  plan_type: Family with Kids
   thumbnail: europe.jpg
 
 plan_002:
   id: 2
   name: Spain Germany and England
   description: Family trip across Europe
+  plan_type: Family with Kids
   thumbnail: spain.jpg
 
 

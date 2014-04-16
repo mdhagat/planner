@@ -2,8 +2,8 @@
 $('.add_day[segment_id=<%= params[:segment_id]%>]').replaceWith('\
   	<%= link_to "", "#", :segment_id=>params[:segment_id], :class => "add_day" %> \
 ')
-h = $('.add_segment_section[segment_id=<%= params[:segment_id]%>]').height();
-$('.add_segment_section[segment_id=<%= params[:segment_id]%>]').height(h+75);
+h = $('.add_stay_section[segment_id=<%= params[:segment_id]%>]').height();
+$('.add_stay_section[segment_id=<%= params[:segment_id]%>]').height(h+75);
 $('.new_day_placeholder[segment_id=<%= params[:segment_id]%>]').replaceWith('\
 		<div day_id=<%=params[:day_id]%> segment_id=<%=params[:segment_id]%> class="day_section"> \
 			<%= label_tag :name, "Day's Activities", :class => "day_description_tag" %> \

@@ -3,6 +3,7 @@ class CreatePlans < ActiveRecord::Migration
     create_table :plans do |t|
       t.string :name
       t.text :description
+      t.string :plan_type
       t.text :thumbnail
       t.integer :orig_plan_id
       t.integer :user_id

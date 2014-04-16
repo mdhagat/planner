@@ -87,9 +87,13 @@ Planner::Application.routes.draw do
    
   get '/customize' => "plans#customize", :as => "customize" 
   post '/save_plan' => "plans#save_for_user", :as => "save_plan" 
+
   # for adding/deleting segments/days when creating a plan
-  get '/add_segment' => "plans#add_segment", :as => "add_segment"
-  get '/delete_segment' => "plans#delete_segment", :as => "delete_segment"
+  get '/add_stay' => "plans#add_stay", :as => "add_stay"
+  get '/delete_stay' => "plans#delete_stay", :as => "delete_stay"
+  get '/add_transport' => "plans#add_transport", :as => "add_transport"
+  get '/delete_transport' => "plans#delete_transport", :as => "delete_transport"  
+  
   get '/add_day' => "plans#add_day", :as => "add_day"
   get '/delete_day' => "plans#delete_day", :as => "delete_day"
    

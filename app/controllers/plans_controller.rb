@@ -23,15 +23,6 @@ class PlansController < ApplicationController
   def edit
   end
   
-  # GET /add_segment
-  def add_segment
-    respond_to do |format|
-      format.html # index.html.erb
-      format.js {}
-      format.json { }
-    end
-  end
-
   # POST /plans
   # POST /plans.json
   def create
@@ -102,6 +93,6 @@ class PlansController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def plan_params
-      params.require(:plan).permit(:name, :description, :thumbnail, :orig_plan_id, :user_id)
+      params.require(:plan).permit(:name, :description, :plan_type, :thumbnail, :orig_plan_id, :user_id)
     end
 end
