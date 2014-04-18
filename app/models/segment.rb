@@ -35,8 +35,8 @@ class Segment < ActiveRecord::Base
     end
   end
   
-  def is_air?
-    self.get_segment_type == 'air'
+  def is_stay?
+    self.get_segment_type == 'Stay'
   end
 
   def get_days

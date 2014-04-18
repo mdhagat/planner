@@ -16,9 +16,10 @@ $('.new_segment_placeholder').replaceWith('\
 		</div> \
 		<div class="segment_location_section"> \
 			<%= label_tag :segment_type, "Type", :class => "type_tag" %> \
-			<%=j select_tag :segment_type, options_for_select([ "Air", "Train", "Bus", "Ship", "Other" ], "Air"), :class => "type_field" %> \
+			<%=j select_tag "segments["+params[:segment_id].to_s+"][segment_type]", options_for_select([ "Air", "Train", "Bus", "Ship", "Other" ], "Air"), :class => "type_field" %> \
 		</div> \
 		<%= image_tag Plan::DEFAULT_TRANSPORT_IMAGE, :class => "segment_thumbnail" %> \
+		<%= hidden_field_tag "segments["+params[:segment_id].to_s+"][thumbnail]", Plan::DEFAULT_TRANSPORT_IMAGE %> \
 		<%= link_to "Change", "/", :class => "change_segment_thumbnail" %> \
   		<%= link_to "X", delete_transport_url(:segment_id=>params[:segment_id]), :class => "delete_segment", :remote => true %> \
  		<div class="add_day_section"> \

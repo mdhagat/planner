@@ -7,16 +7,18 @@ segment000:
   name: Two days in London
   description: "Visit the Tower of London, the new London Eye, and Imperial War Museum."
   city: London
-  country: England
+  country: United Kingdom
   thumbnail: london.jpg
+  segment_type: Stay
   
 segment001:
   id: 1
   name: Three days in Bath 
   description: "Marvel at Stonehenge, visit quaint villages of Cotswold and Lacock, and explore the Roman Baths."
   city: Bath
-  country: England
+  country: United Kingdom
   thumbnail: bath.jpg
+  segment_type: Stay
 
 segment002:
   id: 2
@@ -25,6 +27,7 @@ segment002:
   city: Amsterdam
   country: Netherlands
   thumbnail: amsterdam.jpg
+  segment_type: Stay
   
 segment003:
   id: 3
@@ -33,7 +36,8 @@ segment003:
   city: Varrena
   country: Italy
   thumbnail: lakecomo.jpg
-
+  segment_type: Stay
+  
 segment004:
   id: 4
   name: Three days in Barcelona
@@ -41,6 +45,7 @@ segment004:
   city: Barcelona
   country: Spain
   thumbnail: barcelona.jpg
+  segment_type: Stay
 
 segment005:
   id: 5
@@ -49,6 +54,7 @@ segment005:
   city: Berlin
   country: Germany
   thumbnail: berlin.jpg
+  segment_type: Stay
 
 segment006:
   id: 6
@@ -57,20 +63,21 @@ segment006:
   city: Vienna
   country: Austria
   thumbnail: vienna.jpg
-  
+  segment_type: Stay
+    
 segment007:
   id: 7
   name: San Francisco to London
   description: "United leaves Noon and arrives 9am next day"
   thumbnail: flight.gif
-  segment_type: air
+  segment_type: Air
 
 segment008:
   id: 8
   name: London to San Francisco
   description: "United leaves 11am and arrives 1pm same day"
   thumbnail: flight.gif
-  segment_type: air
+  segment_type: Air
 
 # Segments generated for recommended plans
 

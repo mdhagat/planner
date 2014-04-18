@@ -21,6 +21,8 @@ $('.new_segment_placeholder').replaceWith('\
 			<%=j country_select "segments["+params[:segment_id].to_s+"]", "country", ["Italy", "France", "Germany", "United Kingdom", "Switzerland", "Ireland", "Austria"], {}, {:class=>"country_field"} %> \
 		</div> \
 		<%= image_tag Plan::DEFAULT_STAY_IMAGE, :class => "segment_thumbnail" %> \
+		<%= hidden_field_tag "segments["+params[:segment_id].to_s+"][thumbnail]", Plan::DEFAULT_STAY_IMAGE %> \
+		<%= hidden_field_tag "segments["+params[:segment_id].to_s+"][segment_type]", "Stay" %> \
 		<%= link_to "Change", "/", :class => "change_segment_thumbnail" %> \
   		<%= link_to "X", delete_stay_url(:segment_id=>params[:segment_id]), :class => "delete_segment", :remote => true %> \
   		<%= link_to "Add Day", add_day_url(:day_id=>1, :segment_id=>params[:segment_id]), :segment_id=>params[:segment_id], :class => "add_day", :remote => :true %> \

@@ -17,7 +17,7 @@
 				<div class="plan_text"> <%= plan.get_description %> </div> 
 			</div> 
 			<div class="plan_pictures"> 
-				<% plan.get_segments.select{|s| !s.is_air?}.each_with_index do |segment,index| %>
+				<% plan.get_segments.select{|s| s.is_stay?}.each_with_index do |segment,index| %>
 					<%= image_tag(segment.get_thumbnail, :class => "plan_img") %>
 					<% break if index == 4 %>
 				<% end %>

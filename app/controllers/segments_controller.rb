@@ -40,7 +40,7 @@ class SegmentsController < ApplicationController
   
   # GET /choose
   def choose
-  @segments = Segment.select{ |segment| segment.orig_segment_id.nil? && !segment.is_air?}
+  @segments = Segment.select{ |segment| segment.orig_segment_id.nil? && segment.is_stay?}
     respond_to do |format|
       format.html # choose.html.erb
     end
@@ -106,7 +106,7 @@ class SegmentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def segment_params
-      params.require(:segment).permit(:name, :description, :thumbnail, :plan_id)
+      params.require(:segment).permit(:name, :description, :thumbnail, :segment_type, :plan_id)
     end
     
 end

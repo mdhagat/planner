@@ -7,7 +7,7 @@ class Plan < ActiveRecord::Base
   DEFAULT_PLAN_IMAGE = "travel3.gif"
   DEFAULT_SEGMENT_IMAGE = "travel4.gif"
   DEFAULT_STAY_IMAGE = "travel4.gif"
-  DEFAULT_TRANSPORT_IMAGE = "travel7.gif"
+  DEFAULT_TRANSPORT_IMAGE = "flight.gif"
   
   #
   # Swap a segment in a plan with a different one
@@ -61,7 +61,8 @@ class Plan < ActiveRecord::Base
         # set segment attributes
         new_segment.name = v["title"]
         new_segment.description = v["description"]
-        new_segment.thumbnail = "travel4.gif"
+        new_segment.thumbnail = v["thumbnail"]
+        new_segment.segment_type = v["segment_type"]
         new_segment.save
         
         # process days list if any

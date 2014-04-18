@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-div.segment
+div.segment_stay
 {
   position:relative;
   height:140px;
@@ -13,7 +13,7 @@ div.segment
   box-shadow: 0px 0px 4px 1px #888888;
 }
 
-div.segment_air
+div.segment_transport
 {
   position:relative;
   height:80px;
@@ -55,7 +55,7 @@ div.segment_selection
 //  border-width:1px;
 }
 
-img.segment_img
+img.segment_img_stay
 {
   position:absolute;
   top:20px;
@@ -66,7 +66,7 @@ img.segment_img
 //  border-style:solid;
 }
 
-img.segment_img_air
+img.segment_img_transport
 {
   position:absolute;
   top:0px;
@@ -75,7 +75,7 @@ img.segment_img_air
   width:80px;
 }
 
-div.segment_desc
+div.segment_desc_stay
 {
   position:absolute;
   top:0px;
@@ -89,7 +89,7 @@ div.segment_desc
   margin:0px;
 }
 
-div.segment_desc_air
+div.segment_desc_transport
 {
   position:absolute;
   top:0px;

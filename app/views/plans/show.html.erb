@@ -16,10 +16,10 @@
 	<br/>
 
     <% @plan.segments.each do |segment| %>
-    	<% if segment.is_air?
-    		style_suffix, daybyday_txt = "_air", '' 
+    	<% if segment.is_stay?
+    		style_suffix, daybyday_txt = "_stay", 'Day by Day' 
     	  else
-    		style_suffix, daybyday_txt = "",'Day by Day'
+    		style_suffix, daybyday_txt = "_transport",''
     	  end
     	%>
 
