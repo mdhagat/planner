@@ -2,7 +2,9 @@ class Plan < ActiveRecord::Base
   after_initialize :set_orig_plan
   belongs_to :user
   has_many :segments, -> { order('order_in_plan') }
-  
+  has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
+  validates_attachment_content_type :avatar, :content_type => /\Aimage/
+                                
   # Default thumbnail images for plan and segments
   DEFAULT_PLAN_IMAGE = "travel3.gif"
   DEFAULT_SEGMENT_IMAGE = "travel4.gif"

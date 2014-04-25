@@ -5,6 +5,7 @@ class CreatePlans < ActiveRecord::Migration
       t.text :description
       t.string :plan_type
       t.text :thumbnail
+      t.attachment :avatar
       t.integer :orig_plan_id
       t.integer :user_id
 

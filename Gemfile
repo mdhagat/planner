@@ -55,3 +55,7 @@ end
 
 # For Country Select
 gem 'country_select'
+
+# For ImageMajick, version 4.x has a validation bug
+gem 'paperclip', '~> 3.5.3'
+

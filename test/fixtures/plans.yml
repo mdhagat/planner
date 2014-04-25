@@ -15,7 +15,6 @@ plan_002:
   plan_type: Family with Kids
   thumbnail: spain.jpg
 
-
 # Plans generated for recommendations
 recommended_plan_001:
   id: 11
