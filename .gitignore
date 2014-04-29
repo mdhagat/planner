@@ -27,6 +27,6 @@ doc/
 /.metadata/*
 
 # Ignore paperclip files
-#/public/system/*
+/public/system/*
 
 
