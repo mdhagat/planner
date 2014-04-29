@@ -17,6 +17,8 @@ class PlansController < ApplicationController
   # GET /plans/new
   def new
     @plan = Plan.new
+    @plan.name = 'New Plan'
+    @plan.description ='Plan Description' 
   end
 
   # GET /plans/1/edit

@@ -26,3 +26,7 @@ doc/
 .secret
 /.metadata/*
 
+# Ignore paperclip files
+/public/system/*
+
+

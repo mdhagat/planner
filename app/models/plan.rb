@@ -32,15 +32,19 @@ class Plan < ActiveRecord::Base
   #
   def self.save_plan(plan_id, user_id)
     old_plan = Plan.find(plan_id)
-    new_plan = Plan.new
-    new_plan.orig_plan_id = old_plan.orig_plan_id
+    orig_plan = Plan.find(old_plan.orig_plan_id)
+    new_plan = orig_plan.dup
+#    new_plan = Plan.new
+#    new_plan.orig_plan_id = old_plan.orig_plan_id
     new_plan.user_id = user_id
     new_plan.save
     # iterate over segments to duplicate them
     old_plan.segments.each do |segment| 
-      new_segment = Segment.new
-      new_segment.orig_segment_id = segment.orig_segment_id
-      new_segment.order_in_plan = segment.order_in_plan
+      orig_segment = Segment.find(segment.orig_segment_id)
+      new_segment = orig_segment.dup
+#      new_segment = Segment.new
+#      new_segment.orig_segment_id = segment.orig_segment_id
+#      new_segment.order_in_plan = segment.order_in_plan
       new_segment.save
       new_plan.segments << new_segment
     end
