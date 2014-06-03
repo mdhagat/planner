@@ -5,8 +5,8 @@ This is the planner application for the
 by [Maneesh Dhagat](mailto:mdhagat@yahoo.com).
 
 This a trip planning web application that is meant as
-- a place to share interesting itinieries
-- a recommendation engine to suggest itinieries
+- a place to share interesting itineraries
+- a recommendation engine to suggest itineraries
 
 I am currently using this project to play with / learn technologies that I am interested in: Rails, AJAX, CSS, Heroku, Paperclip, etc.
 
