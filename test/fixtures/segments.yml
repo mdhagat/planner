@@ -10,7 +10,9 @@ segment000:
   country: United Kingdom
   thumbnail: london.jpg
   segment_type: Stay
-  
+  plan_id: 1
+  order_in_plan: 2
+      
 segment001:
   id: 1
   name: Three days in Bath 
@@ -19,7 +21,9 @@ segment001:
   country: United Kingdom
   thumbnail: bath.jpg
   segment_type: Stay
-
+  plan_id: 1  
+  order_in_plan: 3
+  
 segment002:
   id: 2
   name: Three days in Amsterdam
@@ -28,7 +32,9 @@ segment002:
   country: Netherlands
   thumbnail: amsterdam.jpg
   segment_type: Stay
-  
+  plan_id: 1
+  order_in_plan: 4
+      
 segment003:
   id: 3
   name: Five days in Lake Como
@@ -37,7 +43,9 @@ segment003:
   country: Italy
   thumbnail: lakecomo.jpg
   segment_type: Stay
-  
+  plan_id: 1
+  order_in_plan: 5  
+    
 segment004:
   id: 4
   name: Three days in Barcelona
@@ -46,7 +54,9 @@ segment004:
   country: Spain
   thumbnail: barcelona.jpg
   segment_type: Stay
-
+  plan_id: 2
+  order_in_plan: 1  
+  
 segment005:
   id: 5
   name: Three days in Berlin
@@ -55,7 +65,9 @@ segment005:
   country: Germany
   thumbnail: berlin.jpg
   segment_type: Stay
-
+  plan_id: 2
+  order_in_plan: 2
+  
 segment006:
   id: 6
   name: Three days in Vienna
@@ -64,21 +76,27 @@ segment006:
   country: Austria
   thumbnail: vienna.jpg
   segment_type: Stay
-    
+  plan_id: 2
+  order_in_plan: 2
+      
 segment007:
   id: 7
   name: San Francisco to London
   description: "United leaves Noon and arrives 9am next day"
   thumbnail: flight.gif
   segment_type: Air
-
+  plan_id: 1
+  order_in_plan: 1
+    
 segment008:
   id: 8
   name: London to San Francisco
   description: "United leaves 11am and arrives 1pm same day"
   thumbnail: flight.gif
   segment_type: Air
-
+  plan_id: 1
+  order_in_plan: 6
+  
 # Segments generated for recommended plans
 
 recommened_plan01_segment00:

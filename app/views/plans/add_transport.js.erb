@@ -22,9 +22,6 @@ $('.new_segment_placeholder').replaceWith('\
 		<%= hidden_field_tag "segments["+params[:segment_id].to_s+"][thumbnail]", Plan::DEFAULT_TRANSPORT_IMAGE %> \
 		<%= link_to "Change", "/", :class => "change_segment_thumbnail" %> \
   		<%= link_to "X", delete_transport_url(:segment_id=>params[:segment_id]), :class => "delete_segment", :remote => true %> \
- 		<div class="add_day_section"> \
-  			<div class="new_day_placeholder" segment_id="<%=params[:segment_id]%>"></div> \
-  		</div> \
 	</div> \
 	<div class="new_segment_placeholder"></div> \
 ')

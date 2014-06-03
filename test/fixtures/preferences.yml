@@ -19,3 +19,13 @@ customer:
   which_region: 1   # europe
   what_season: 1    # summer
   user_id: 2
+
+customer:
+  id: 3
+  type_of_travelers: 2  # family
+  how_you_travel: 2   # comfort
+  what_to_see: 2    # museums
+  how_long: 2     # 2 weeks
+  which_region: 1   # europe
+  what_season: 1    # summer
+  user_id: 3

@@ -6,28 +6,30 @@ $('.add_transport').replaceWith('\
 ')
 $('.new_segment_placeholder').replaceWith('\
 	<div class="add_stay_section" segment_id=<%=params[:segment_id]%>> \
-		<div class="segment_title_section"> \
-			<%= label_tag :name, "Stay Title", :class => "title_tag" %> \
-			<%= text_field_tag "segments["+params[:segment_id].to_s+"][title]", "", :class => "title_field" %> \
-		</div> \
-		<div class="segment_description_section"> \
-			<%= label_tag :description, "Description", :class => "description_tag" %> \
-			<textarea name=<%="segments["+params[:segment_id].to_s+"][description]"%> class="description_field"></textarea> \
-		</div> \
-		<div class="segment_location_section"> \
-			<%= label_tag :city, "Town or City", :class => "city_tag" %> \
-			<%= text_field_tag "segments["+params[:segment_id].to_s+"][city]", "", :class =>"city_field" %> \
-			<%= label_tag :country, "Country", :class => "country_tag" %> \
-			<%=j country_select "segments["+params[:segment_id].to_s+"]", "country", ["Italy", "France", "Germany", "United Kingdom", "Switzerland", "Ireland", "Austria"], {}, {:class=>"country_field"} %> \
-		</div> \
-		<%= image_tag Plan::DEFAULT_STAY_IMAGE, :class => "segment_thumbnail" %> \
-		<%= hidden_field_tag "segments["+params[:segment_id].to_s+"][thumbnail]", Plan::DEFAULT_STAY_IMAGE %> \
-		<%= hidden_field_tag "segments["+params[:segment_id].to_s+"][segment_type]", "Stay" %> \
-		<%= link_to "Change", "/", :class => "change_segment_thumbnail" %> \
-  		<%= link_to "X", delete_stay_url(:segment_id=>params[:segment_id]), :class => "delete_segment", :remote => true %> \
-  		<%= link_to "Add Day", add_day_url(:day_id=>1, :segment_id=>params[:segment_id]), :segment_id=>params[:segment_id], :class => "add_day", :remote => :true %> \
- 		<div class="add_day_section"> \
-  			<div class="new_day_placeholder" segment_id="<%=params[:segment_id]%>"></div> \
+		<div class="segment_header"> \
+			<div class="segment_title_section"> \
+				<%= label_tag :name, "Stay Title", :class => "title_tag" %> \
+				<%= text_field_tag "segments["+params[:segment_id].to_s+"][title]", "", :class => "title_field" %> \
+			</div> \
+			<div class="segment_description_section"> \
+				<%= label_tag :description, "Description", :class => "description_tag" %> \
+				<textarea name=<%="segments["+params[:segment_id].to_s+"][description]"%> class="description_field"></textarea> \
+			</div> \
+			<div class="segment_location_section"> \
+				<%= label_tag :city, "Town or City", :class => "city_tag" %> \
+				<%= text_field_tag "segments["+params[:segment_id].to_s+"][city]", "", :class =>"city_field" %> \
+				<%= label_tag :country, "Country", :class => "country_tag" %> \
+				<%=j country_select "segments["+params[:segment_id].to_s+"]", "country", ["Italy", "France", "Germany", "United Kingdom", "Switzerland", "Ireland", "Austria"], {}, {:class=>"country_field"} %> \
+			</div> \
+			<%= image_tag Plan::DEFAULT_STAY_IMAGE, :class => "segment_thumbnail" %> \
+			<%= hidden_field_tag "segments["+params[:segment_id].to_s+"][thumbnail]", Plan::DEFAULT_STAY_IMAGE %> \
+			<%= hidden_field_tag "segments["+params[:segment_id].to_s+"][segment_type]", "Stay" %> \
+			<%= link_to "Change", "/", :class => "change_segment_thumbnail" %> \
+	  		<%= link_to "X", delete_stay_url(:segment_id=>params[:segment_id]), :class => "delete_segment", :remote => true %> \
+  		</div> \
+		<div class="new_day_placeholder" segment_id="<%=params[:segment_id]%>"></div> \
+   		<div class="add_day_section"> \
+	  		<%= link_to "Add Day", add_day_url(:day_id=>1, :segment_id=>params[:segment_id]), :segment_id=>params[:segment_id], :class => "add_day", :remote => :true %> \
   		</div> \
 	</div> \
 	<div class="new_segment_placeholder"></div> \

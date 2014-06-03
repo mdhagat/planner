@@ -28,18 +28,72 @@
   			<%= f.select :plan_type, options_for_select([ "Family with Kids", "Couple Only", "History and Museum Buffs", "Adventure Backpackers" ], "Family with Kids"), {}, :class => 'type_field' %> 
   		</div>
 
-		<%= image_tag Plan::DEFAULT_PLAN_IMAGE, :class => 'plan_thumbnail' %>
-	 	
-		
+		<%= image_tag @plan.avatar.url(:thumb), :class => 'plan_thumbnail' %>
 		<div class="file-input-wrapper">
-	  		<button class="btn-file-input">Replace</button>
+	  		<%= button_tag "Replace", :class=>"btn-file-input" %>
 	 		<%= f.file_field :avatar, :class => 'change_plan_thumbnail'  %>
 		</div>
 
   	</div>
   	
-  	<% @plan.segments.each do |segment| %>
-  	blah
+  	<% @plan.segments.each_with_index do |segment, i| %>
+  		<% segment_with_index = "segment["+i.to_s+"]" %>	
+	  	<% if segment.is_stay? %>
+		 	<div class="add_stay_section" segment_id="<%=i.to_s%>"> 
+		 		<div class="segment_header">
+					<div class="segment_title_section"> 
+						<%= label_tag :name, "Stay Title", :class => "title_tag" %> 
+						<%= text_field_tag segment_with_index+"[title]", segment.name, :class => "title_field" %> 
+					</div> 
+					<div class="segment_description_section"> \
+						<%= label_tag :description, "Description", :class => "description_tag" %> \
+						<textarea name=<%=segment_with_index+"[description]"%> class="description_field"><%= segment.description %></textarea>
+					</div>
+					<div class="segment_location_section"> 
+						<%= label_tag :city, "Town or City", :class => "city_tag" %> 
+						<%= text_field_tag segment_with_index+"[city]", segment.city, :class =>"city_field" %> 
+						<%= label_tag :country, "Country", :class => "country_tag" %> 
+						<%= country_select segment_with_index, "country", [segment.country], {}, {:class=>"country_field"} %>
+					</div>
+					<%= image_tag segment.thumbnail, :class => "segment_thumbnail" %>
+					<%= hidden_field_tag segment_with_index+"[thumbnail]", segment.thumbnail %> 
+					<%= hidden_field_tag segment_with_index+"[segment_type]", segment.segment_type %> 
+					<%= link_to "Change", "#", :class => "change_segment_thumbnail" %> 
+	  				<%= link_to "X", delete_stay_url(:segment_id=>i.to_s), :class => "delete_segment", :remote => true %> 
+  				</div>
+  				
+  				<% segment.days.each_with_index do |day, j| %>
+					<div day_id="<%=j.to_s%>" segment_id="<%=i.to_s%>" class="day_section"> 
+						<%= label_tag :name, "Day's Activities", :class => "day_description_tag" %> 
+						<textarea name=<%="segments["+i.to_s+"][days]["+j.to_s+"]"%> class="day_description_field"><%= day.name %></textarea> 
+						<%= link_to "X", delete_day_url(:day_id=>j.to_s, :segment_id=>i.to_s), :class => "delete_day", :remote => true %> 
+					</div> 
+  				<% end %>
+				<div class="new_day_placeholder" segment_id="<%=i.to_s%>"></div> 
+				<div class="add_day_section">	
+					<%= link_to "Add Day", add_day_url(:day_id=>segment.days.length.to_s, :segment_id=>i.to_s), :segment_id=>i.to_s, :class => "add_day", :remote => :true %>
+				</div> 
+			</div> 
+		<% else %>
+			<div class="add_transport_section" segment_id="<%=i.to_s%>"> 
+				<div class="segment_title_section"> 
+					<%= label_tag :name, "From and To", :class => "title_tag" %> 
+					<%= text_field_tag segment_with_index+"[title]", segment.name, :class => "title_field" %> 
+				</div> 
+				<div class="segment_description_section"> 
+					<%= label_tag :description, "Description", :class => "description_tag" %> 
+					<textarea name=<%=segment_with_index+"[description]"%> class="description_field"><%= segment.description %></textarea> 
+				</div> 
+				<div class="segment_location_section"> 
+					<%= label_tag :segment_type, "Type", :class => "type_tag" %> 
+					<%= select_tag segment_with_index+"[segment_type]", options_for_select([ "Air", "Train", "Bus", "Ship", "Other" ], segment.segment_type), :class => "type_field" %> 
+				</div> 
+				<%= image_tag segment.thumbnail, :class => "segment_thumbnail" %>
+				<%= hidden_field_tag segment_with_index+"[thumbnail]", segment.thumbnail %> 
+				<%= link_to "Change", "/", :class => "change_segment_thumbnail" %> 
+  				<%= link_to "X", delete_transport_url(:segment_id=>i.to_s), :class => "delete_segment", :remote => true %> 
+			</div>
+	  	<% end %>
   	<% end %>
   	    
     

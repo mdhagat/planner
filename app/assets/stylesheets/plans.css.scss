@@ -297,7 +297,7 @@ div.new_plan_header
 .change_plan_thumbnail
 {
   position:absolute;
-  top:115px;
+  top:110px;
   left:20px;
   width:100px;
   font-size:x-small;
@@ -305,36 +305,35 @@ div.new_plan_header
   content: 'Select some files';
 }
 
-  .file-input-wrapper {
-    width: 80px;
-    height: 20px;
-      top:120px;
-  left:30px;
-    overflow: hidden;
-    position: relative;
-  }
-  .file-input-wrapper > input[type="file"] {
+// For change thumbnail button
 
-    position: absolute;
-    top: 0;
-    right: 0;
-    opacity: 0;
-  }
-  .file-input-wrapper > .btn-file-input {
-    display: inline-block;
-    width: 80px;
-    height: 20px;
-      font-size:x-small;
-      
+.file-input-wrapper {
+  width: 80px;
+  height: 20px;
+  top:110px;
+  left:30px;
+  overflow: hidden;
+  position: relative;
+}
+
+.file-input-wrapper > input[type="file"] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0;
+}
+
+.file-input-wrapper > .btn-file-input {
+  display: inline-block;
+  width: 80px;
+  height: 20px;
+  font-size:x-small;  
   color:#4C3380;
   font-weight:bold; 
   background-color:#C2D699;
   border-width : 0px;
   box-shadow: 0px 0px 2px 1px #888888;
-  }
-
-
-
+}
 
 .add_segment_links
 {
@@ -371,7 +370,6 @@ div.add_stay_section
   margin-left: auto;
   margin-right: auto;
   margin-bottom:15px;
-  height:155px;
   width:630px;
   background-color:#F5F0E6;
   box-shadow: 0px 0px 4px 1px #888888;
@@ -387,6 +385,14 @@ div.add_transport_section
   width:630px;
   background-color:#F5F0E6;
   box-shadow: 0px 0px 4px 1px #888888;
+}
+
+.segment_header
+{
+  height:130px;
+  width:630px;
+//  border-style:solid;
+//  border-width:1px; 
 }
 
 .segment_title_section
@@ -501,19 +507,20 @@ div.add_transport_section
 
 .add_day
 {
-  position:absolute;
-  bottom:10px;
-  left:280px;
+//  position:absolute;
+//  bottom:10px;
+//  left:280px;
 //  border-style:solid;
 //  border-width:1px;
 }
 
 .add_day_section
 {
-  position:absolute;
-  top:125px;
-  left:10px;
-  width:600px;
+//  position:absolute;
+//  top:125px;
+//  left:10px;
+  height:25px;
+  width:630px;
   margin:auto;
 //  border-style:solid;
 //  border-width:1px;
@@ -523,7 +530,7 @@ div.add_transport_section
 {
   position:relative;
   height:75px;
-  width:605px;
+  width:630;
   margin:auto;
 //  border-style:solid;
 //  border-width:1px;
@@ -533,7 +540,7 @@ div.add_transport_section
 {
   position:absolute;
   top:5px;
-  left:5px;
+  left:15px;
   height:30px;
   width:100px;
   text-align: right;
@@ -547,7 +554,7 @@ div.add_transport_section
   vertical-align:top;
   position:absolute;
   top:5px;
-  left:115px;
+  left:125px;
   height:60px;
   width:450px;
   resize:none;

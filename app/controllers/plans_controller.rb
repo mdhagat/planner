@@ -19,6 +19,7 @@ class PlansController < ApplicationController
     @plan = Plan.new
     @plan.name = 'New Plan'
     @plan.description ='Plan Description' 
+    @plan.user_id = current_user.id
   end
 
   # GET /plans/1/edit

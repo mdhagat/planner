@@ -2,7 +2,6 @@
 	<br/>
 
 	<div class="plan_heading"> 
-		<%= image_tag @plan.avatar.url(:thumb) %>
 		<div class="plan_heading_title"> Your Plan: <%= @plan.get_name %> </div>
 		<div class="plan_heading_description"> <%= @plan.get_description %> </div>
 		<% if signed_in? %>

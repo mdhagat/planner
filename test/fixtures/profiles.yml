@@ -28,8 +28,25 @@ customer:
   state_province: CA
   country_region: USA
   pin_zip: 95148
-  phone: 4028-555-1212
+  phone: 408-555-1212
   email: jane@email.com
   secret_question: What is your pet's name?
   secret_answer: fish
   user_id: 2
+
+customer:
+  id: 3
+  role: customer
+  first_name: John
+  last_name: Customer
+  street_address1: 123 Any Road
+  street_address2:
+  city: Los Angeles
+  state_province: CA
+  country_region: USA
+  pin_zip: 95148
+  phone: 925-555-1212
+  email: john@email.com
+  secret_question: What is your pet's name?
+  secret_answer: fish
+  user_id: 3
