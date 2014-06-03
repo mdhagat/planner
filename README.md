@@ -12,7 +12,5 @@ I am currently using this project to play with / learn technologies that I am in
 
 It is running at http://limitless-lake-2862.herokuapp.com
 
-As of this writing I have been working on this for about 3 months.
-
 Maneesh Dhagat
 6/3/2014
