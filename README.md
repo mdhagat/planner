@@ -10,7 +10,7 @@ This a trip planning web application that is meant as
 
 I am currently using this project to play with / learn technologies that I am interested in: Rails, AJAX, CSS, Heroku, Paperclip, etc.
 
-It is running at http://http://limitless-lake-2862.herokuapp.com
+It is running at http://limitless-lake-2862.herokuapp.com
 
 As of this writing I have been working on this for about 3 months.
 
