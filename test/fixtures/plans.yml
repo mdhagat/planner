@@ -7,6 +7,10 @@ plan_001:
   description: London, Bath, Amsterdam and Lake Como
   plan_type: Family with Kids
   thumbnail: europe.jpg
+  avatar_file_name: europe.jpg
+  avatar_content_type: image/jpeg
+  avatar_file_size: 60777
+  avatar_updated_at: 2014-06-03 21:24:12.731239
   user_id: 1
 
 plan_002:
@@ -15,6 +19,10 @@ plan_002:
   description: Family trip across Europe
   plan_type: Family with Kids
   thumbnail: spain.jpg
+  avatar_file_name: spain.jpg
+  avatar_content_type: image/jpeg
+  avatar_file_size: 2067321
+  avatar_updated_at: 2014-06-03 23:08:21.547667
   user_id: 1
 
 # Plans generated for recommendations
