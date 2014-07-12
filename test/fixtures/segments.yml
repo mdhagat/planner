@@ -32,7 +32,7 @@ segment001:
   description: "Marvel at Stonehenge, visit quaint villages of Cotswold and Lacock, and explore the Roman Baths."
   city: Bath
   country: United Kingdom
-  thumbnail: bath.jpg\
+  thumbnail: bath.jpg
   tip: "Book the Lacock and Cotswold tours early. They fill up fast"
   segment_type: Stay
   plan_id: 1  
