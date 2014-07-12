@@ -11,31 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131015003101) do
-
-  create_table "activities", force: true do |t|
-    t.date     "day"
-    t.string   "name"
-    t.text     "description"
-    t.text     "thumbnail"
-    t.datetime "start_time"
-    t.datetime "stop_time"
-    t.integer  "day_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "activities_providers", id: false, force: true do |t|
-    t.integer  "activity_id"
-    t.integer  "provider_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+ActiveRecord::Schema.define(version: 20140712011205) do
 
   create_table "days", force: true do |t|
     t.date     "day"
     t.string   "name"
-    t.text     "description"
+    t.text     "activities"
     t.integer  "segment_id"
     t.integer  "order_in_segment"
     t.datetime "created_at"
@@ -51,7 +32,6 @@ ActiveRecord::Schema.define(version: 20131015003101) do
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
-    t.integer  "orig_plan_id"
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -90,8 +70,6 @@ ActiveRecord::Schema.define(version: 20131015003101) do
 
   create_table "providers", force: true do |t|
     t.string   "name"
-    t.text     "description"
-    t.text     "thumbnail"
     t.string   "provider_type"
     t.string   "street_address1"
     t.string   "street_address2"
@@ -112,9 +90,16 @@ ActiveRecord::Schema.define(version: 20131015003101) do
     t.string   "segment_type"
     t.string   "city"
     t.string   "country"
-    t.integer  "orig_segment_id"
+    t.string   "tip"
     t.integer  "plan_id"
     t.integer  "order_in_plan"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "segments_providers", id: false, force: true do |t|
+    t.integer  "segment_id"
+    t.integer  "provider_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

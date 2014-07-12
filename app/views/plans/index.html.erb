@@ -12,13 +12,13 @@
  		<div class="plan">   
 
 			<div class="plan_desc"> 
-				<div class="plan_title"> <%= plan.get_name %> </div> 
+				<div class="plan_title"> <%= plan.name %> </div> 
 				<br/> <br/>
-				<div class="plan_text"> <%= plan.get_description %> </div> 
+				<div class="plan_text"> <%= plan.description %> </div> 
 			</div> 
 			<div class="plan_pictures"> 
-				<% plan.get_segments.select{|s| s.is_stay?}.each_with_index do |segment,index| %>
-					<%= image_tag(segment.get_thumbnail, :class => "plan_img") %>
+				<% plan.segments.select{|s| s.is_stay?}.each_with_index do |segment,index| %>
+					<%= image_tag(segment.thumbnail, :class => "plan_img") %>
 					<% break if index == 4 %>
 				<% end %>
  			</div> 

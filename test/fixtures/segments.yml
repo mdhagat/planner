@@ -2,6 +2,19 @@
 
 # Seed segments 
 
+#
+# Plan 1
+# 
+
+segment007:
+  id: 7
+  name: San Francisco to London
+  description: "United leaves Noon and arrives 9am next day"
+  thumbnail: flight.gif
+  segment_type: Air
+  plan_id: 1
+  order_in_plan: 1
+ 
 segment000:
   id: 0
   name: Two days in London
@@ -19,7 +32,8 @@ segment001:
   description: "Marvel at Stonehenge, visit quaint villages of Cotswold and Lacock, and explore the Roman Baths."
   city: Bath
   country: United Kingdom
-  thumbnail: bath.jpg
+  thumbnail: bath.jpg\
+  tip: "Book the Lacock and Cotswold tours early. They fill up fast"
   segment_type: Stay
   plan_id: 1  
   order_in_plan: 3
@@ -46,6 +60,19 @@ segment003:
   plan_id: 1
   order_in_plan: 5  
     
+segment008:
+  id: 8
+  name: London to San Francisco
+  description: "United leaves 11am and arrives 1pm same day"
+  thumbnail: flight.gif
+  segment_type: Air
+  plan_id: 1
+  order_in_plan: 6
+  
+#
+# Plan 2
+# 
+      
 segment004:
   id: 4
   name: Three days in Barcelona
@@ -79,96 +106,6 @@ segment006:
   plan_id: 2
   order_in_plan: 2
       
-segment007:
-  id: 7
-  name: San Francisco to London
-  description: "United leaves Noon and arrives 9am next day"
-  thumbnail: flight.gif
-  segment_type: Air
-  plan_id: 1
-  order_in_plan: 1
-    
-segment008:
-  id: 8
-  name: London to San Francisco
-  description: "United leaves 11am and arrives 1pm same day"
-  thumbnail: flight.gif
-  segment_type: Air
-  plan_id: 1
-  order_in_plan: 6
-  
-# Segments generated for recommended plans
 
-recommened_plan01_segment00:
-  id: 20
-  orig_segment_id: 7
-  plan_id: 11
-  order_in_plan: 1
   
-recommened_plan01_segment01:
-  id: 21
-  orig_segment_id: 0
-  plan_id: 11
-  order_in_plan: 2
-  
-recommened_plan01_segment02:
-  id: 22
-  orig_segment_id: 1
-  plan_id: 11
-  order_in_plan: 3
-
-recommened_plan01_segment03:
-  id: 23
-  orig_segment_id: 2
-  plan_id: 11
-  order_in_plan: 4
-  
-recommened_plan01_segment04:
-  id: 24
-  orig_segment_id: 3
-  plan_id: 11
-  order_in_plan: 5
-
-recommened_plan01_segment05:
-  id: 25
-  orig_segment_id: 8
-  plan_id: 11
-  order_in_plan: 6  
-  
-# Segments for User specific plans
-plan01segment01:
-  id: 201
-  orig_segment_id: 1
-  plan_id: 101
-  order_in_plan: 1
-
-plan01segment02:
-  id: 202
-  orig_segment_id: 2
-  plan_id: 101
-  order_in_plan: 2
-  
-plan01segment03:
-  id: 203
-  orig_segment_id: 3
-  plan_id: 101
-  order_in_plan: 3
-  
-plan02segment01:
-  id: 204
-  orig_segment_id: 4
-  plan_id: 102
-  order_in_plan: 1
-
-plan02segment02:
-  id: 205
-  orig_segment_id: 5
-  plan_id: 102
-  order_in_plan: 2
-  
-plan02segment03:
-  id: 206
-  orig_segment_id: 6
-  plan_id: 102
-  order_in_plan: 3
  

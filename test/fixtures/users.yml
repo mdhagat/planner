@@ -7,16 +7,16 @@ admin:
   hashed_password: 'ae2d0651c5ec1bf74a6e9b1b81afe5465fb4f9b4'
   salt: '357030400.10544064020730337'
 
-# customer1/customer123
+# jane/customer123
 customer:
   id: 2
-  name: customer1
+  name: jane
   hashed_password: '92363d0faec0dfebf94cd0e4031a02c80dc991ac'
   salt: '357037800.9675243226744973'
 
-# customer2/customer123
+# john/customer123
 customer:
-  id: 2
-  name: customer2
+  id: 3
+  name: john
   hashed_password: '92363d0faec0dfebf94cd0e4031a02c80dc991ac'
   salt: '357037800.9675243226744973'

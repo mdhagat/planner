@@ -1,0 +1,73 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+#
+# London Providers
+#
+
+segment_provider001:
+  segment_id: 0
+  provider_id: 1
+
+segment_provider002:
+  segment_id: 0
+  provider_id: 2
+  
+segment_provider003:
+  segment_id: 0
+  provider_id: 3
+  
+segment_provider004:
+  segment_id: 0
+  provider_id: 13
+
+#
+# Bath Providers
+#
+
+segment_provider005:
+  segment_id: 1
+  provider_id: 4
+
+segment_provider006:
+  segment_id: 1
+  provider_id: 5
+  
+segment_provider007:
+  segment_id: 1
+  provider_id: 6
+  
+segment_provider008:
+  segment_id: 1
+  provider_id: 14
+    
+#
+# Amsterdam Providers
+#
+
+segment_provider009:
+  segment_id: 2
+  provider_id: 7
+
+segment_provider010:
+  segment_id: 2
+  provider_id: 8
+
+segment_provider011:
+  segment_id: 2
+  provider_id: 9
+
+#
+# Varenna Providers
+#
+
+segment_provider012:
+  segment_id: 3
+  provider_id: 10
+
+segment_provider013:
+  segment_id: 3
+  provider_id: 11
+    
+segment_provider014:
+  segment_id: 3
+  provider_id: 12

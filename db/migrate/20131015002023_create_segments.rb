@@ -7,7 +7,7 @@ class CreateSegments < ActiveRecord::Migration
       t.string :segment_type
       t.string :city
       t.string :country
-      t.integer :orig_segment_id
+      t.string :tip
       t.integer :plan_id
       t.integer :order_in_plan
 

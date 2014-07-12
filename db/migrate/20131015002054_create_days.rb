@@ -3,7 +3,7 @@ class CreateDays < ActiveRecord::Migration
     create_table :days do |t|
       t.date :day
       t.string :name
-      t.text :description
+      t.text :activities
       t.integer :segment_id
       t.integer :order_in_segment
 

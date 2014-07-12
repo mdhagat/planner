@@ -1,8 +1,0 @@
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
-
-<% 1.upto(27+42) do |i| %>
-activity_provider<%= i %>:
-  activity_id: <%= i %>
-  provider_id: <%= (i%3)+1 %>
-<% end %>
-

@@ -1,46 +1,88 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-hotel:
+hotel001:
   id: 1
-  name: MyString
-  description: MyText
-  thumbnail: MyText
-  provider_type: MyString
-  street_address1: MyString
-  street_address2: MyString
-  city: MyString
-  state_province: MyString
-  country_region: MyString
-  pin_zip: MyString
-  phone: MyString
-  url: MyString
-
-transport:
+  name: Quality Crown Hotel Hyde Park
+  provider_type: Lodging
+  url: "www.qualitycrown.com"
+  
+hotel002:
   id: 2
-  name: MyString
-  description: MyText
-  thumbnail: MyText
-  provider_type: MyString
-  street_address1: MyString
-  street_address2: MyString
-  city: MyString
-  state_province: MyString
-  country_region: MyString
-  pin_zip: MyString
-  phone: MyString
-  url: MyString
+  name: Hilton London Metropole
+  provider_type: Lodging
+  url: "www.hiltonlondonmet.com"
 
-other:
+hotel003:
   id: 3
-  name: MyString
-  description: MyText
-  thumbnail: MyText
-  provider_type: MyString
-  street_address1: MyString
-  street_address2: MyString
-  city: MyString
-  state_province: MyString
-  country_region: MyString
-  pin_zip: MyString
-  phone: MyString
-  url: MyString
+  name: The Shaftsbury Premier London Hyde Park
+  provider_type: Lodging
+  url: "www.theshaftesbury.co.uk/shaftesburyhydepark.php"
+  
+hotel004:
+  id: 4
+  name: Abbey Green Flat
+  provider_type: Lodging
+  url: "www.threeabbeygreen.com"
+
+hotel005:
+  id: 5
+  name: Harringtons Hotel
+  provider_type: Lodging
+  url: "www.haringtonshotel.co.uk"  
+  
+hotel006:
+  id: 6
+  name: SACO Apartments at Bath
+  provider_type: Lodging
+  url: "www.sacoapartments.com/serviced-apartments/uk/bath/saco-batt"  
+  
+hotel007:
+  id: 7
+  name: Grand Hotel Amrath
+  provider_type: Lodging
+  url: "www.amrathamsterdam.com"
+  
+hotel008:
+  id: 8
+  name: Misc Hotel
+  provider_type: Lodging
+  url: "misceatdrinksleep.com"
+  
+hotel009:
+  id: 9
+  name: Hotel Le Coin
+  provider_type: Lodging
+  url: "www.lecoin.nl"
+
+hotel010:
+  id: 10
+  name: Hotel Villa Cipressi 
+  provider_type: Lodging
+  url: "www.hotelvillacipressi.it"  
+
+hotel011:
+  id: 11
+  name: Hotel Olivedo
+  provider_type: Lodging
+  url: "www.olivedo.it"  
+  
+hotel012:
+  id: 12
+  name: Hotel Du Lac
+  provider_type: Lodging
+  url: "www.albergodulac.com"
+  
+restaurant001:
+  id: 13
+  name: Woodlands
+  provider_type: Restaurant
+  url: "www.woodlandsrestaurant.co.uk"
+  
+other001:
+  id: 14
+  name: Mad Max Tours
+  provider_type: Other
+  url: "www.madmaxtours.co.uk"
+  
+  
+  

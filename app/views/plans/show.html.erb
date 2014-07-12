@@ -2,8 +2,8 @@
 	<br/>
 
 	<div class="plan_heading"> 
-		<div class="plan_heading_title"> Your Plan: <%= @plan.get_name %> </div>
-		<div class="plan_heading_description"> <%= @plan.get_description %> </div>
+		<div class="plan_heading_title"> Your Plan: <%= @plan.name %> </div>
+		<div class="plan_heading_description"> <%= @plan.description %> </div>
 		<% if signed_in? %>
 			<% if @plan.user_id.nil? %>
 				<%= link_to 'Save in my Account', save_plan_path, :method => "post", :class => "plan_heading_actions" %>
@@ -24,11 +24,11 @@
     	%>
 
 		<div class=<%= "segment"+style_suffix %> draggable = "true">
-			<%= image_tag(segment.get_thumbnail, :class => "segment_img"+style_suffix) %>	
+			<%= image_tag(segment.thumbnail, :class => "segment_img"+style_suffix) %>	
 			<div class=<%= "segment_desc"+style_suffix %>> 
-				<div class="segment_title"> <%= segment.get_name %> </div> 
+				<div class="segment_title"> <%= segment.name %> </div> 
 				<br/> <br/>
-				<div class="segment_text"> <%= segment.get_description %> </div> 
+				<div class="segment_text"> <%= segment.description %> </div> 
 			</div> 
 			<% if signed_in? %>
 				<%= link_to 'Swap', choose_url(:segment_id => segment.id, :plan_id => @plan.id), :class => "segment_swap" %>		

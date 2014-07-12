@@ -29,6 +29,7 @@
   		</div>
 
 		<%= image_tag @plan.avatar.url(:thumb), :class => 'plan_thumbnail' %>
+
 		<div class="file-input-wrapper">
 	  		<%= button_tag "Replace", :class=>"btn-file-input" %>
 	 		<%= f.file_field :avatar, :class => 'change_plan_thumbnail'  %>

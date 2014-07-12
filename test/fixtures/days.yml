@@ -4,7 +4,7 @@ day1:
   id: 1
   day: 2011-6-1
   name: Arrive in London, Check-in at Hotel Hyde Park, Tower of London
-  description: Coming Soon
+  activities: Coming Soon
   segment_id: 0
   order_in_segment: 1
 
@@ -12,7 +12,7 @@ day2:
   id: 2
   day: 2011-6-1
   name: London Eye, Imperial War Museum
-  description: Coming Soon
+  activities: Coming Soon
   segment_id: 0
   order_in_segment: 2
 
@@ -20,7 +20,7 @@ day3:
   id: 3
   day: 2011-6-1
   name: Train to Bath (First Great Western), Check-in at Abbey Green Flat
-  description: Coming Soon
+  activities: Coming Soon
   segment_id: 1
   order_in_segment: 1
 
@@ -28,7 +28,7 @@ day4:
   id: 4
   day: 2011-6-1
   name: Stonehenge and Lacock Village Tour (Mad Max Tours)
-  description: Coming Soon
+  activities: Coming Soon
   segment_id: 1
   order_in_segment: 2
 
@@ -36,7 +36,7 @@ day5:
   id: 5
   day: 2011-6-1
   name: Roman Baths, Fashion Museum
-  description: Coming Soon
+  activities: Coming Soon
   segment_id: 1
   order_in_segment: 3
 
@@ -44,7 +44,7 @@ day6:
   id: 6
   day: 2011-6-1
   name: Bus to London (National Express),  Flight to Barcelona (British Airways), Check-in at Hotel Montblanc, Las Ramblas
-  description: Coming Soon
+  activities: Coming Soon
   segment_id: 2
   order_in_segment: 1
 
@@ -52,7 +52,7 @@ day7:
   id: 7
   day: 2011-6-1
   name: Sagrada Familia, Casa Batlo
-  description: Coming Soon
+  activities: Coming Soon
   segment_id: 2
   order_in_segment: 2
 
@@ -60,7 +60,7 @@ day8:
   id: 8
   day: 2011-6-1
   name: Walk to Beach, Olympic Harbor
-  description: Coming Soon
+  activities: Coming Soon
   segment_id: 2
   order_in_segment: 3
 
@@ -68,7 +68,7 @@ day9:
   id: 9
   day: 2011-6-1
   name: Flight to Milan (EasyJet), Bus to Varrena, Check-in at Hotel Villa Cipressi
-  description: Coming Soon
+  activities: Coming Soon
   segment_id: 3
   order_in_segment: 1
 
@@ -76,7 +76,7 @@ day10:
   id: 10
   day: 2011-6-1
   name: Around Varrena
-  description: Coming Soon
+  activities: Coming Soon
   segment_id: 3
   order_in_segment: 2
 
@@ -84,7 +84,7 @@ day11:
   id: 11
   day: 2011-6-1
   name: Day trip to Bellagio
-  description: Coming Soon
+  activities: Coming Soon
   segment_id: 3
   order_in_segment: 3
 
@@ -92,7 +92,7 @@ day12:
   id: 12
   day: 2011-6-1
   name: Day trip to Como
-  description: Coming Soon
+  activities: Coming Soon
   segment_id: 3
   order_in_segment: 4
 
@@ -100,7 +100,7 @@ day13:
   id: 13
   day: 2011-6-1
   name: Bus to Milan, Fight to London (EasyJet), Check-in at Springfield Hotel
-  description: Coming Soon
+  activities: Coming Soon
   segment_id: 3
   order_in_segment: 5
   

@@ -2,8 +2,6 @@ class CreateProviders < ActiveRecord::Migration
   def change
     create_table :providers do |t|
       t.string :name
-      t.text :description
-      t.text :thumbnail
       t.string :provider_type
       t.string :street_address1
       t.string :street_address2
